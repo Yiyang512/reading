@@ -1,128 +1,170 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>French Reading Practice - TEF/DELF Preparation</title>
-    <link rel="stylesheet" href="css/styles.css">
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
-    <base target="_parent">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hemiya Read — French Reading Practice (TEF/DELF)</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,700&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/reading.css">
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+  <base target="_parent">
 </head>
 <body>
-    <div class="container">
-        <header>
-            <h1>French Reading Practice</h1>
-        </header>
+  <div class="bg-glow" aria-hidden="true"></div>
+  <div class="container">
+    <header class="site-header">
+      <div class="brand">
+        <img src="https://yiyang512.github.io/new/hemiya.jpg" alt="Hemiya" class="brand-avatar">
+        <div>
+          <p class="brand-kicker">Hemiya</p>
+          <h1>Read</h1>
+        </div>
+      </div>
+      <div class="header-actions">
+        <span id="user-chip" class="user-chip hidden"></span>
+        <button type="button" id="reset-user" class="text-btn">Reset profile</button>
+      </div>
+    </header>
 
-        <main>
-            <!-- Contact Form Section -->
-            <div id="contact-form-container">
-                <div class="form-header">
-                    <div class="avatar-container">
-                        <img src="https://yiyang512.github.io/new/hemiya.jpg" alt="Hemiya Bot" class="avatar">
-                    </div>
-                    <h2>Begin Your French Learning Journey</h2>
-                    <p>Please provide your information to access our reading practice tool</p>
-                </div>
-                
-                <form id="contact-form">
-                    <div class="form-group">
-                        <label for="fullName">Full Name <span class="required">*</span></label>
-                        <input type="text" id="fullName" name="fullName" required>
-                        <div class="error-message" id="fullName-error">Please enter your full name</div>
-                    </div>
-                    
-                    <div class="form-group">
-                        <label for="email">Email Address <span class="required">*</span></label>
-                        <input type="email" id="email" name="email" required>
-                        <div class="error-message" id="email-error">Please enter a valid email address</div>
-                    </div>
-                    
-                    <div class="form-group">
-                        <label for="phone">Phone Number (optional)</label>
-                        <input type="tel" id="phone" name="phone">
-                    </div>
-                    
-                    <div class="form-group">
-                        <label for="targetLevel">Target French Level <span class="required">*</span></label>
-                        <select id="targetLevel" name="targetLevel" required>
-                            <option value="">-- Select your level --</option>
-                            <option value="A1">A1 - Beginner</option>
-                            <option value="A2">A2 - Elementary</option>
-                            <option value="B1">B1 - Intermediate</option>
-                            <option value="B2">B2 - Upper Intermediate</option>
-                        </select>
-                        <div class="error-message" id="targetLevel-error">Please select your target level</div>
-                    </div>
-                    
-                    <button type="submit" id="submit-form">Start Your French Journey</button>
-                    
-                    <div id="form-success" class="form-message success-message hidden">
-                        <p>Thank you for your submission! You now have access to our reading practice tool.</p>
-                    </div>
-                    
-                    <div id="form-error" class="form-message error-message hidden">
-                        <p>There was an error processing your submission. Please try again.</p>
-                    </div>
-                </form>
+    <main>
+      <section id="contact-section" class="panel contact-panel">
+        <div class="form-header">
+          <h2>Begin your French reading journey</h2>
+          <p>Enter your details to unlock TEF/DELF-style reading practice across A1–B2.</p>
+        </div>
+        <form id="contact-form" novalidate>
+          <div class="form-grid">
+            <div class="form-group">
+              <label for="fullName">Full name <span class="required">*</span></label>
+              <input type="text" id="fullName" name="fullName" autocomplete="name" required>
+              <div class="error-message" id="fullName-error">Please enter your full name</div>
             </div>
-
-            <!-- Reading Level Selection - Initially Hidden -->
-            <div id="reading-app" class="hidden">
-                <div class="level-selector">
-                    <h2>Sélectionnez votre niveau</h2>
-                    <div class="level-buttons">
-                        <button class="level-btn" data-level="A1">A1</button>
-                        <button class="level-btn" data-level="A2">A2</button>
-                        <button class="level-btn" data-level="B1">B1</button>
-                        <button class="level-btn" data-level="B2">B2</button>
-                    </div>
-                </div>
-
-                <div id="level-description" class="hidden">
-                    <div class="level-info">
-                        <h2>Niveau <span id="current-level">A1</span></h2>
-                        <p id="level-explanation"></p>
-                    </div>
-                    <div class="reading-selector">
-                        <label for="reading-select">Choisissez un texte:</label>
-                        <select id="reading-select">
-                            <option value="">-- Sélectionnez un texte --</option>
-                        </select>
-                    </div>
-                </div>
-
-                <div id="reading-container" class="hidden">
-                    <div class="timer-container">
-                        <span id="timer">10:00</span>
-                        <button id="start-timer">Démarrer</button>
-                    </div>
-                    
-                    <section class="reading-passage">
-                        <h2 id="reading-title"></h2>
-                        <div id="passage-content" class="passage-content"></div>
-                    </section>
-
-                    <section class="questions">
-                        <h2>Questions de compréhension</h2>
-                        <form id="quiz-form"></form>
-                    </section>
-
-                    <section class="results hidden" id="results">
-                        <h2>Résultats</h2>
-                        <p id="score"></p>
-                        <div id="detailed-feedback"></div>
-                    </section>
-                </div>
+            <div class="form-group">
+              <label for="email">Email <span class="required">*</span></label>
+              <input type="email" id="email" name="email" autocomplete="email" required>
+              <div class="error-message" id="email-error">Please enter a valid email address</div>
             </div>
-        </main>
+            <div class="form-group">
+              <label for="phone">Phone <span class="optional">(optional)</span></label>
+              <input type="tel" id="phone" name="phone" autocomplete="tel">
+            </div>
+            <div class="form-group">
+              <label for="targetLevel">Target level <span class="required">*</span></label>
+              <select id="targetLevel" name="targetLevel" required>
+                <option value="">Select your level</option>
+                <option value="A1">A1 — Beginner</option>
+                <option value="A2">A2 — Elementary</option>
+                <option value="B1">B1 — Intermediate</option>
+                <option value="B2">B2 — Upper intermediate</option>
+              </select>
+              <div class="error-message" id="targetLevel-error">Please select your target level</div>
+            </div>
+          </div>
+          <button type="submit" id="submit-form">Start reading practice</button>
+          <div id="form-success" class="form-message success-message hidden">
+            <p>You’re in. Loading your reading workspace…</p>
+          </div>
+          <div id="form-error" class="form-message error-message hidden">
+            <p>There was a problem sending your registration. Please try again.</p>
+          </div>
+        </form>
+      </section>
 
-        <footer>
-            <p>French Reading Practice Tool for TEF/DELF Preparation</p>
-        </footer>
-    </div>
+      <section id="reading-app" class="hidden">
+        <div class="level-selector panel">
+          <div class="section-head">
+            <h2>Choose your level</h2>
+            <p>Browse texts, track scores, and train with a timed comprehension workflow.</p>
+          </div>
+          <div class="level-buttons">
+            <button class="level-btn" data-level="A1">A1</button>
+            <button class="level-btn" data-level="A2">A2</button>
+            <button class="level-btn" data-level="B1">B1</button>
+            <button class="level-btn" data-level="B2">B2</button>
+          </div>
+        </div>
 
-    <script src="js/data.js"></script>
-    <script src="js/script.js"></script>
+        <div id="level-panel" class="hidden">
+          <div class="panel level-info">
+            <div class="section-head inline">
+              <div>
+                <h2 id="level-title">Niveau A1</h2>
+                <p id="level-explanation"></p>
+              </div>
+              <div id="stats-bar" class="stats-bar"></div>
+            </div>
+            <div class="toolbar">
+              <label class="search-wrap">
+                <span class="sr-only">Search texts</span>
+                <input type="search" id="exercise-search" placeholder="Search texts…">
+              </label>
+            </div>
+            <div id="exercise-grid" class="exercise-grid"></div>
+          </div>
+        </div>
+
+        <div id="session-panel" class="hidden">
+          <div class="session-top">
+            <button type="button" id="back-btn" class="ghost">← Back to texts</button>
+            <div class="session-actions">
+              <div class="font-controls" aria-label="Text size">
+                <button type="button" id="font-down" class="ghost" title="Smaller text">A−</button>
+                <button type="button" id="font-up" class="ghost" title="Larger text">A+</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="panel reader-panel">
+            <div class="session-heading">
+              <div>
+                <h2 id="exercise-title">Text</h2>
+                <p id="exercise-meta" class="muted"></p>
+              </div>
+              <div class="timer-row compact">
+                <span id="timer" class="timer">10:00</span>
+                <button type="button" id="timer-toggle">Start timer</button>
+                <button type="button" id="timer-reset" class="ghost">Reset</button>
+              </div>
+            </div>
+            <article class="passage-card">
+              <div id="passage-content" class="passage-content"></div>
+            </article>
+          </div>
+
+          <div class="panel questions-panel">
+            <div class="section-head inline">
+              <h2>Comprehension questions</h2>
+            </div>
+            <form id="quiz-form"></form>
+          </div>
+
+          <section class="panel results hidden" id="results">
+            <div class="section-head inline">
+              <div>
+                <h2>Results</h2>
+                <p id="score-summary" class="score-summary"></p>
+              </div>
+              <div class="results-actions">
+                <button type="button" id="retry-btn" class="ghost">Retry</button>
+                <button type="button" id="next-btn">Next text</button>
+              </div>
+            </div>
+            <div id="score-detail" class="score-detail"></div>
+          </section>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <p>Hemiya Read · TEF / DELF French reading practice</p>
+    </footer>
+  </div>
+
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+
+  <script src="js/data.js"></script>
+  <script src="js/app.js"></script>
 </body>
-</html> 
+</html>

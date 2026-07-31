@@ -6,7 +6,7 @@ const levelDescriptions = {
     'B2': 'Niveau avancé. Vous pouvez comprendre des textes complexes sur des sujets concrets ou abstraits.'
 };
 
-// Reading data organized by level
+// Reading data organized by level (32+ texts each)
 const readingData = {
     'A1': [
         {
@@ -570,6 +570,638 @@ const readingData = {
                     question: 'Que mange Felix le soir ?',
                     correctAnswer: 'de la pâtée pour chat',
                     explanation: 'Le soir, Felix mange de la pâtée pour chat, comme indiqué dans le texte.'
+                }
+            ]
+        },
+        {
+            id: 'a1-voisin',
+            title: 'Mon voisin',
+            content: `<p>Je m'appelle Léa. Mon voisin s'appelle Paul. Il a 40 ans.</p><p>Paul a un chien. Le chien s'appelle Rex. Le matin, Paul marche avec Rex dans le parc.</p>`,
+            questions: [
+                {
+                    id: 'a1-voisin-q1',
+                    type: 'radio',
+                    question: 'Comment s\'appelle le voisin ?',
+                    options: [
+                        { id: 'a', text: 'Léa' },
+                        { id: 'b', text: 'Paul' },
+                        { id: 'c', text: 'Rex' }
+                    ],
+                    correctAnswer: 'b',
+                    explanation: 'Le texte indique : Paul.'
+                },
+                {
+                    id: 'a1-voisin-q2',
+                    type: 'radio',
+                    question: 'Quel âge a Paul ?',
+                    options: [
+                        { id: 'a', text: '14 ans' },
+                        { id: 'b', text: '40 ans' },
+                        { id: 'c', text: '60 ans' }
+                    ],
+                    correctAnswer: 'b',
+                    explanation: 'Le texte indique : 40 ans.'
+                },
+                {
+                    id: 'a1-voisin-q3',
+                    type: 'radio',
+                    question: 'Où marchent-ils ?',
+                    options: [
+                        { id: 'a', text: 'À la plage' },
+                        { id: 'b', text: 'Dans le parc' },
+                        { id: 'c', text: 'À l\'école' }
+                    ],
+                    correctAnswer: 'b',
+                    explanation: 'Le texte indique : Dans le parc.'
+                }
+            ]
+        },
+        {
+            id: 'a1-courses',
+            title: 'Les courses',
+            content: `<p>Aujourd'hui, je vais au supermarché. J'achète du pain, du lait et des pommes.</p><p>Je paie 12 euros. Ensuite, je rentre à la maison en bus.</p>`,
+            questions: [
+                {
+                    id: 'a1-courses-q1',
+                    type: 'radio',
+                    question: 'Où va la personne ?',
+                    options: [
+                        { id: 'a', text: 'À la pharmacie' },
+                        { id: 'b', text: 'Au supermarché' },
+                        { id: 'c', text: 'À la banque' }
+                    ],
+                    correctAnswer: 'b',
+                    explanation: 'Le texte indique : Au supermarché.'
+                },
+                {
+                    id: 'a1-courses-q2',
+                    type: 'radio',
+                    question: 'Combien paie-t-elle ?',
+                    options: [
+                        { id: 'a', text: '2 euros' },
+                        { id: 'b', text: '12 euros' },
+                        { id: 'c', text: '20 euros' }
+                    ],
+                    correctAnswer: 'b',
+                    explanation: 'Le texte indique : 12 euros.'
+                }
+            ]
+        },
+        {
+            id: 'a1-matin',
+            title: 'Le matin',
+            content: `<p>Le lundi, je me lève à 7 heures. Je prends un café et un croissant.</p><p>Je vais au travail à vélo. Mon bureau ouvre à 9 heures.</p>`,
+            questions: [
+                {
+                    id: 'a1-matin-q1',
+                    type: 'radio',
+                    question: 'À quelle heure se lève-t-elle ?',
+                    options: [
+                        { id: 'a', text: '6 h' },
+                        { id: 'b', text: '7 h' },
+                        { id: 'c', text: '8 h' }
+                    ],
+                    correctAnswer: 'b',
+                    explanation: 'Le texte indique : 7 h.'
+                },
+                {
+                    id: 'a1-matin-q2',
+                    type: 'radio',
+                    question: 'Comment va-t-elle au travail ?',
+                    options: [
+                        { id: 'a', text: 'En voiture' },
+                        { id: 'b', text: 'À vélo' },
+                        { id: 'c', text: 'En métro' }
+                    ],
+                    correctAnswer: 'b',
+                    explanation: 'Le texte indique : À vélo.'
+                }
+            ]
+        },
+        {
+            id: 'a1-anniversaire',
+            title: 'Un anniversaire',
+            content: `<p>Samedi, c'est l'anniversaire de ma sœur. Elle a 18 ans.</p><p>Nous organisons une fête à la maison. Il y a un gâteau au chocolat.</p>`,
+            questions: [
+                {
+                    id: 'a1-anniversaire-q1',
+                    type: 'radio',
+                    question: 'Qui fête un anniversaire ?',
+                    options: [
+                        { id: 'a', text: 'Le frère' },
+                        { id: 'b', text: 'La sœur' },
+                        { id: 'c', text: 'La mère' }
+                    ],
+                    correctAnswer: 'b',
+                    explanation: 'Le texte indique : La sœur.'
+                },
+                {
+                    id: 'a1-anniversaire-q2',
+                    type: 'radio',
+                    question: 'Quel âge a-t-elle ?',
+                    options: [
+                        { id: 'a', text: '16' },
+                        { id: 'b', text: '18' },
+                        { id: 'c', text: '20' }
+                    ],
+                    correctAnswer: 'b',
+                    explanation: 'Le texte indique : 18.'
+                }
+            ]
+        },
+        {
+            id: 'a1-meteo',
+            title: 'Il fait beau',
+            content: `<p>Aujourd'hui, il fait beau. Le soleil brille. Il fait 22 degrés.</p><p>Je vais à la plage avec mes amis. Nous nageons et nous jouons au ballon.</p>`,
+            questions: [
+                {
+                    id: 'a1-meteo-q1',
+                    type: 'radio',
+                    question: 'Quelle température ?',
+                    options: [
+                        { id: 'a', text: '12°' },
+                        { id: 'b', text: '22°' },
+                        { id: 'c', text: '32°' }
+                    ],
+                    correctAnswer: 'b',
+                    explanation: 'Le texte indique : 22°.'
+                },
+                {
+                    id: 'a1-meteo-q2',
+                    type: 'radio',
+                    question: 'Où vont-ils ?',
+                    options: [
+                        { id: 'a', text: 'Au cinéma' },
+                        { id: 'b', text: 'À la plage' },
+                        { id: 'c', text: 'Au musée' }
+                    ],
+                    correctAnswer: 'b',
+                    explanation: 'Le texte indique : À la plage.'
+                }
+            ]
+        },
+        {
+            id: 'a1-ecole',
+            title: 'À l\'école',
+            content: `<p>Lucas est élève en CM2. Il aime le français et le sport.</p><p>L'école commence à 8 h 30 et finit à 16 h 30. Le mercredi, il n'y a pas classe l'après-midi.</p>`,
+            questions: [
+                {
+                    id: 'a1-ecole-q1',
+                    type: 'radio',
+                    question: 'Quelle classe ?',
+                    options: [
+                        { id: 'a', text: 'CE1' },
+                        { id: 'b', text: 'CM2' },
+                        { id: 'c', text: '6e' }
+                    ],
+                    correctAnswer: 'b',
+                    explanation: 'Le texte indique : CM2.'
+                },
+                {
+                    id: 'a1-ecole-q2',
+                    type: 'radio',
+                    question: 'Quand pas de classe l\'après-midi ?',
+                    options: [
+                        { id: 'a', text: 'Lundi' },
+                        { id: 'b', text: 'Mercredi' },
+                        { id: 'c', text: 'Vendredi' }
+                    ],
+                    correctAnswer: 'b',
+                    explanation: 'Le texte indique : Mercredi.'
+                }
+            ]
+        },
+        {
+            id: 'a1-restaurant',
+            title: 'Au restaurant',
+            content: `<p>Nous dînons au restaurant Le Jardin. Je prends une salade et un jus d'orange.</p><p>Mon ami prend un steak-frites. L'addition est de 35 euros.</p>`,
+            questions: [
+                {
+                    id: 'a1-restaurant-q1',
+                    type: 'radio',
+                    question: 'Quel restaurant ?',
+                    options: [
+                        { id: 'a', text: 'Le Parc' },
+                        { id: 'b', text: 'Le Jardin' },
+                        { id: 'c', text: 'La Gare' }
+                    ],
+                    correctAnswer: 'b',
+                    explanation: 'Le texte indique : Le Jardin.'
+                },
+                {
+                    id: 'a1-restaurant-q2',
+                    type: 'radio',
+                    question: 'Addition ?',
+                    options: [
+                        { id: 'a', text: '25 €' },
+                        { id: 'b', text: '35 €' },
+                        { id: 'c', text: '45 €' }
+                    ],
+                    correctAnswer: 'b',
+                    explanation: 'Le texte indique : 35 €.'
+                }
+            ]
+        },
+        {
+            id: 'a1-telephone',
+            title: 'Au téléphone',
+            content: `<p>- Allô, Marie ? C'est Julien.</p><p>- Oui, bonjour !</p><p>- On se voit demain à 15 heures devant le cinéma ?</p><p>- D'accord, à demain !</p>`,
+            questions: [
+                {
+                    id: 'a1-telephone-q1',
+                    type: 'radio',
+                    question: 'Qui appelle ?',
+                    options: [
+                        { id: 'a', text: 'Marie' },
+                        { id: 'b', text: 'Julien' },
+                        { id: 'c', text: 'Paul' }
+                    ],
+                    correctAnswer: 'b',
+                    explanation: 'Le texte indique : Julien.'
+                },
+                {
+                    id: 'a1-telephone-q2',
+                    type: 'radio',
+                    question: 'Rendez-vous ?',
+                    options: [
+                        { id: 'a', text: '14 h' },
+                        { id: 'b', text: '15 h' },
+                        { id: 'c', text: '16 h' }
+                    ],
+                    correctAnswer: 'b',
+                    explanation: 'Le texte indique : 15 h.'
+                }
+            ]
+        },
+        {
+            id: 'a1-vacances',
+            title: 'Les vacances',
+            content: `<p>En août, je pars en vacances en Espagne avec ma famille.</p><p>Nous restons deux semaines près de la mer. J'apporte mon maillot et mon appareil photo.</p>`,
+            questions: [
+                {
+                    id: 'a1-vacances-q1',
+                    type: 'radio',
+                    question: 'Où part-elle ?',
+                    options: [
+                        { id: 'a', text: 'Italie' },
+                        { id: 'b', text: 'Espagne' },
+                        { id: 'c', text: 'Portugal' }
+                    ],
+                    correctAnswer: 'b',
+                    explanation: 'Le texte indique : Espagne.'
+                },
+                {
+                    id: 'a1-vacances-q2',
+                    type: 'radio',
+                    question: 'Combien de temps ?',
+                    options: [
+                        { id: 'a', text: '1 semaine' },
+                        { id: 'b', text: '2 semaines' },
+                        { id: 'c', text: '1 mois' }
+                    ],
+                    correctAnswer: 'b',
+                    explanation: 'Le texte indique : 2 semaines.'
+                }
+            ]
+        },
+        {
+            id: 'a1-maison',
+            title: 'Ma maison',
+            content: `<p>J'habite dans une petite maison à Lille. Il y a trois chambres et un jardin.</p><p>Dans le jardin, il y a des fleurs et un grand arbre.</p>`,
+            questions: [
+                {
+                    id: 'a1-maison-q1',
+                    type: 'radio',
+                    question: 'Ville ?',
+                    options: [
+                        { id: 'a', text: 'Lyon' },
+                        { id: 'b', text: 'Lille' },
+                        { id: 'c', text: 'Paris' }
+                    ],
+                    correctAnswer: 'b',
+                    explanation: 'Le texte indique : Lille.'
+                },
+                {
+                    id: 'a1-maison-q2',
+                    type: 'radio',
+                    question: 'Combien de chambres ?',
+                    options: [
+                        { id: 'a', text: '2' },
+                        { id: 'b', text: '3' },
+                        { id: 'c', text: '4' }
+                    ],
+                    correctAnswer: 'b',
+                    explanation: 'Le texte indique : 3.'
+                }
+            ]
+        },
+        {
+            id: 'a1-sport',
+            title: 'Le sport',
+            content: `<p>Le mardi, je fais du yoga. Le samedi, je joue au tennis avec mon frère.</p><p>Le sport est important pour moi. Je me sens en forme.</p>`,
+            questions: [
+                {
+                    id: 'a1-sport-q1',
+                    type: 'radio',
+                    question: 'Quel sport le mardi ?',
+                    options: [
+                        { id: 'a', text: 'Tennis' },
+                        { id: 'b', text: 'Yoga' },
+                        { id: 'c', text: 'Foot' }
+                    ],
+                    correctAnswer: 'b',
+                    explanation: 'Le texte indique : Yoga.'
+                },
+                {
+                    id: 'a1-sport-q2',
+                    type: 'radio',
+                    question: 'Avec qui le tennis ?',
+                    options: [
+                        { id: 'a', text: 'Sa sœur' },
+                        { id: 'b', text: 'Son frère' },
+                        { id: 'c', text: 'Un ami' }
+                    ],
+                    correctAnswer: 'b',
+                    explanation: 'Le texte indique : Son frère.'
+                }
+            ]
+        },
+        {
+            id: 'a1-travail',
+            title: 'Mon travail',
+            content: `<p>Je suis vendeuse dans un magasin de vêtements. Je travaille du mardi au samedi.</p><p>Le lundi, je suis libre. J'aime aider les clients.</p>`,
+            questions: [
+                {
+                    id: 'a1-travail-q1',
+                    type: 'radio',
+                    question: 'Métier ?',
+                    options: [
+                        { id: 'a', text: 'Professeure' },
+                        { id: 'b', text: 'Vendeuse' },
+                        { id: 'c', text: 'Infirmière' }
+                    ],
+                    correctAnswer: 'b',
+                    explanation: 'Le texte indique : Vendeuse.'
+                },
+                {
+                    id: 'a1-travail-q2',
+                    type: 'radio',
+                    question: 'Jour libre ?',
+                    options: [
+                        { id: 'a', text: 'Mardi' },
+                        { id: 'b', text: 'Lundi' },
+                        { id: 'c', text: 'Dimanche' }
+                    ],
+                    correctAnswer: 'b',
+                    explanation: 'Le texte indique : Lundi.'
+                }
+            ]
+        },
+        {
+            id: 'a1-animaux',
+            title: 'Les animaux',
+            content: `<p>Clara a un chat blanc et un poisson rouge.</p><p>Le chat s'appelle Neige. Le soir, Clara donne à manger à ses animaux.</p>`,
+            questions: [
+                {
+                    id: 'a1-animaux-q1',
+                    type: 'radio',
+                    question: 'Couleur du chat ?',
+                    options: [
+                        { id: 'a', text: 'Noir' },
+                        { id: 'b', text: 'Blanc' },
+                        { id: 'c', text: 'Gris' }
+                    ],
+                    correctAnswer: 'b',
+                    explanation: 'Le texte indique : Blanc.'
+                },
+                {
+                    id: 'a1-animaux-q2',
+                    type: 'radio',
+                    question: 'Nom du chat ?',
+                    options: [
+                        { id: 'a', text: 'Neige' },
+                        { id: 'b', text: 'Rex' },
+                        { id: 'c', text: 'Mimi' }
+                    ],
+                    correctAnswer: 'a',
+                    explanation: 'Le texte indique : Neige.'
+                }
+            ]
+        },
+        {
+            id: 'a1-bus',
+            title: 'Le bus',
+            content: `<p>Pour aller au centre-ville, je prends le bus numéro 7.</p><p>Le ticket coûte 1,90 euro. Le trajet dure vingt minutes.</p>`,
+            questions: [
+                {
+                    id: 'a1-bus-q1',
+                    type: 'radio',
+                    question: 'Numéro du bus ?',
+                    options: [
+                        { id: 'a', text: '5' },
+                        { id: 'b', text: '7' },
+                        { id: 'c', text: '9' }
+                    ],
+                    correctAnswer: 'b',
+                    explanation: 'Le texte indique : 7.'
+                },
+                {
+                    id: 'a1-bus-q2',
+                    type: 'radio',
+                    question: 'Durée ?',
+                    options: [
+                        { id: 'a', text: '10 min' },
+                        { id: 'b', text: '20 min' },
+                        { id: 'c', text: '30 min' }
+                    ],
+                    correctAnswer: 'b',
+                    explanation: 'Le texte indique : 20 min.'
+                }
+            ]
+        },
+        {
+            id: 'a1-marche',
+            title: 'Au marché',
+            content: `<p>Le dimanche matin, je vais au marché. J'achète des fromages et des légumes.</p><p>Je parle avec la vendeuse. Elle est très sympa.</p>`,
+            questions: [
+                {
+                    id: 'a1-marche-q1',
+                    type: 'radio',
+                    question: 'Quand ?',
+                    options: [
+                        { id: 'a', text: 'Samedi soir' },
+                        { id: 'b', text: 'Dimanche matin' },
+                        { id: 'c', text: 'Lundi' }
+                    ],
+                    correctAnswer: 'b',
+                    explanation: 'Le texte indique : Dimanche matin.'
+                },
+                {
+                    id: 'a1-marche-q2',
+                    type: 'radio',
+                    question: 'Qu\'achète-t-elle ?',
+                    options: [
+                        { id: 'a', text: 'Du poisson' },
+                        { id: 'b', text: 'Fromages et légumes' },
+                        { id: 'c', text: 'Des livres' }
+                    ],
+                    correctAnswer: 'b',
+                    explanation: 'Le texte indique : Fromages et légumes.'
+                }
+            ]
+        },
+        {
+            id: 'a1-cinema',
+            title: 'Au cinéma',
+            content: `<p>Ce soir, nous allons voir un film comique. La séance commence à 20 h 15.</p><p>Les places coûtent 9 euros. Après le film, nous mangeons une glace.</p>`,
+            questions: [
+                {
+                    id: 'a1-cinema-q1',
+                    type: 'radio',
+                    question: 'Type de film ?',
+                    options: [
+                        { id: 'a', text: 'Horreur' },
+                        { id: 'b', text: 'Comique' },
+                        { id: 'c', text: 'Documentaire' }
+                    ],
+                    correctAnswer: 'b',
+                    explanation: 'Le texte indique : Comique.'
+                },
+                {
+                    id: 'a1-cinema-q2',
+                    type: 'radio',
+                    question: 'Prix place ?',
+                    options: [
+                        { id: 'a', text: '7 €' },
+                        { id: 'b', text: '9 €' },
+                        { id: 'c', text: '12 €' }
+                    ],
+                    correctAnswer: 'b',
+                    explanation: 'Le texte indique : 9 €.'
+                }
+            ]
+        },
+        {
+            id: 'a1-ami',
+            title: 'Mon ami',
+            content: `<p>Mon meilleur ami s'appelle Karim. Il habite à Marseille.</p><p>Il aime la musique et la cuisine. Nous nous voyons souvent le week-end.</p>`,
+            questions: [
+                {
+                    id: 'a1-ami-q1',
+                    type: 'radio',
+                    question: 'Où habite Karim ?',
+                    options: [
+                        { id: 'a', text: 'Lyon' },
+                        { id: 'b', text: 'Marseille' },
+                        { id: 'c', text: 'Nice' }
+                    ],
+                    correctAnswer: 'b',
+                    explanation: 'Le texte indique : Marseille.'
+                },
+                {
+                    id: 'a1-ami-q2',
+                    type: 'radio',
+                    question: 'Quand se voient-ils ?',
+                    options: [
+                        { id: 'a', text: 'Le lundi' },
+                        { id: 'b', text: 'Le week-end' },
+                        { id: 'c', text: 'Jamais' }
+                    ],
+                    correctAnswer: 'b',
+                    explanation: 'Le texte indique : Le week-end.'
+                }
+            ]
+        },
+        {
+            id: 'a1-medecin',
+            title: 'Chez le médecin',
+            content: `<p>J'ai mal à la gorge. Je vais chez le médecin à 10 heures.</p><p>Le médecin me donne un médicament. Je dois le prendre trois fois par jour.</p>`,
+            questions: [
+                {
+                    id: 'a1-medecin-q1',
+                    type: 'radio',
+                    question: 'Problème ?',
+                    options: [
+                        { id: 'a', text: 'Mal au dos' },
+                        { id: 'b', text: 'Mal à la gorge' },
+                        { id: 'c', text: 'Fièvre' }
+                    ],
+                    correctAnswer: 'b',
+                    explanation: 'Le texte indique : Mal à la gorge.'
+                },
+                {
+                    id: 'a1-medecin-q2',
+                    type: 'radio',
+                    question: 'Combien de fois/jour ?',
+                    options: [
+                        { id: 'a', text: '1' },
+                        { id: 'b', text: '2' },
+                        { id: 'c', text: '3' }
+                    ],
+                    correctAnswer: 'c',
+                    explanation: 'Le texte indique : 3.'
+                }
+            ]
+        },
+        {
+            id: 'a1-fete',
+            title: 'La fête nationale',
+            content: `<p>Le 14 juillet, il y a un feu d'artifice en ville.</p><p>Nous regardons le spectacle près de la rivière. Il y a beaucoup de monde.</p>`,
+            questions: [
+                {
+                    id: 'a1-fete-q1',
+                    type: 'radio',
+                    question: 'Date ?',
+                    options: [
+                        { id: 'a', text: '1er mai' },
+                        { id: 'b', text: '14 juillet' },
+                        { id: 'c', text: '25 décembre' }
+                    ],
+                    correctAnswer: 'b',
+                    explanation: 'Le texte indique : 14 juillet.'
+                },
+                {
+                    id: 'a1-fete-q2',
+                    type: 'radio',
+                    question: 'Où regardent-ils ?',
+                    options: [
+                        { id: 'a', text: 'À la maison' },
+                        { id: 'b', text: 'Près de la rivière' },
+                        { id: 'c', text: 'À l\'école' }
+                    ],
+                    correctAnswer: 'b',
+                    explanation: 'Le texte indique : Près de la rivière.'
+                }
+            ]
+        },
+        {
+            id: 'a1-lettre',
+            title: 'Une carte postale',
+            content: `<p>Chère maman, je suis à Nice. Il fait très chaud.</p><p>Je nage tous les jours. Bisous, Sophie.</p>`,
+            questions: [
+                {
+                    id: 'a1-lettre-q1',
+                    type: 'radio',
+                    question: 'Qui écrit ?',
+                    options: [
+                        { id: 'a', text: 'Maman' },
+                        { id: 'b', text: 'Sophie' },
+                        { id: 'c', text: 'Nice' }
+                    ],
+                    correctAnswer: 'b',
+                    explanation: 'Le texte indique : Sophie.'
+                },
+                {
+                    id: 'a1-lettre-q2',
+                    type: 'radio',
+                    question: 'Où est-elle ?',
+                    options: [
+                        { id: 'a', text: 'Paris' },
+                        { id: 'b', text: 'Nice' },
+                        { id: 'c', text: 'Lille' }
+                    ],
+                    correctAnswer: 'b',
+                    explanation: 'Le texte indique : Nice.'
                 }
             ]
         }
@@ -1164,6 +1796,626 @@ const readingData = {
                     explanation: 'Le prochain objectif de la personne est d\'organiser une petite exposition dans un café de son quartier.'
                 }
             ]
+        },
+        {
+            id: 'a2-demenagement',
+            title: 'Déménagement',
+            content: `<p>Samia déménage le mois prochain. Elle quitte son studio pour un deux-pièces près du parc.</p><p>Ses amis l'aideront samedi. Elle a déjà réservé un petit camion.</p>`,
+            questions: [
+                {
+                    id: 'a2-demenagement-q1',
+                    type: 'radio',
+                    question: 'Nouveau logement ?',
+                    options: [
+                        { id: 'a', text: 'Studio' },
+                        { id: 'b', text: 'Deux-pièces' },
+                        { id: 'c', text: 'Maison' }
+                    ],
+                    correctAnswer: 'b',
+                    explanation: 'Le texte indique : Deux-pièces.'
+                },
+                {
+                    id: 'a2-demenagement-q2',
+                    type: 'radio',
+                    question: 'Qui aide ?',
+                    options: [
+                        { id: 'a', text: 'Ses parents' },
+                        { id: 'b', text: 'Ses amis' },
+                        { id: 'c', text: 'Des voisins' }
+                    ],
+                    correctAnswer: 'b',
+                    explanation: 'Le texte indique : Ses amis.'
+                }
+            ]
+        },
+        {
+            id: 'a2-stage',
+            title: 'Un stage',
+            content: `<p>Hugo commence un stage dans une start-up. Il travaille trois jours par semaine pendant deux mois.</p><p>Il apprend le marketing digital et gagne une petite indemnité.</p>`,
+            questions: [
+                {
+                    id: 'a2-stage-q1',
+                    type: 'radio',
+                    question: 'Durée ?',
+                    options: [
+                        { id: 'a', text: '1 mois' },
+                        { id: 'b', text: '2 mois' },
+                        { id: 'c', text: '6 mois' }
+                    ],
+                    correctAnswer: 'b',
+                    explanation: 'Le texte indique : 2 mois.'
+                },
+                {
+                    id: 'a2-stage-q2',
+                    type: 'radio',
+                    question: 'Domaine ?',
+                    options: [
+                        { id: 'a', text: 'Finance' },
+                        { id: 'b', text: 'Marketing digital' },
+                        { id: 'c', text: 'Droit' }
+                    ],
+                    correctAnswer: 'b',
+                    explanation: 'Le texte indique : Marketing digital.'
+                }
+            ]
+        },
+        {
+            id: 'a2-voyage-train',
+            title: 'Voyage en train',
+            content: `<p>Nous partons à Bordeaux vendredi. Le train quitte Paris à 8 h 40 et arrive vers 10 h 50.</p><p>Nous avons choisi des places côté fenêtre. Le billet aller-retour coûte 89 euros.</p>`,
+            questions: [
+                {
+                    id: 'a2-voyage-train-q1',
+                    type: 'radio',
+                    question: 'Destination ?',
+                    options: [
+                        { id: 'a', text: 'Lyon' },
+                        { id: 'b', text: 'Bordeaux' },
+                        { id: 'c', text: 'Nantes' }
+                    ],
+                    correctAnswer: 'b',
+                    explanation: 'Le texte indique : Bordeaux.'
+                },
+                {
+                    id: 'a2-voyage-train-q2',
+                    type: 'radio',
+                    question: 'Prix A/R ?',
+                    options: [
+                        { id: 'a', text: '69 €' },
+                        { id: 'b', text: '89 €' },
+                        { id: 'c', text: '109 €' }
+                    ],
+                    correctAnswer: 'b',
+                    explanation: 'Le texte indique : 89 €.'
+                }
+            ]
+        },
+        {
+            id: 'a2-association',
+            title: 'Une association',
+            content: `<p>L'association Quartier Vert organise des ateliers de jardinage le samedi matin.</p><p>Les inscriptions sont gratuites. Il faut juste apporter des gants.</p>`,
+            questions: [
+                {
+                    id: 'a2-association-q1',
+                    type: 'radio',
+                    question: 'Quand ?',
+                    options: [
+                        { id: 'a', text: 'Vendredi soir' },
+                        { id: 'b', text: 'Samedi matin' },
+                        { id: 'c', text: 'Dimanche' }
+                    ],
+                    correctAnswer: 'b',
+                    explanation: 'Le texte indique : Samedi matin.'
+                },
+                {
+                    id: 'a2-association-q2',
+                    type: 'radio',
+                    question: 'Prix ?',
+                    options: [
+                        { id: 'a', text: '10 €' },
+                        { id: 'b', text: 'Gratuit' },
+                        { id: 'c', text: '5 €' }
+                    ],
+                    correctAnswer: 'b',
+                    explanation: 'Le texte indique : Gratuit.'
+                }
+            ]
+        },
+        {
+            id: 'a2-probleme-internet',
+            title: 'Problème Internet',
+            content: `<p>Depuis hier, Internet ne fonctionne pas chez Léa. Elle a appelé son opérateur.</p><p>Un technicien viendra mercredi entre 14 h et 16 h.</p>`,
+            questions: [
+                {
+                    id: 'a2-probleme-internet-q1',
+                    type: 'radio',
+                    question: 'Depuis quand ?',
+                    options: [
+                        { id: 'a', text: 'Ce matin' },
+                        { id: 'b', text: 'Hier' },
+                        { id: 'c', text: 'La semaine dernière' }
+                    ],
+                    correctAnswer: 'b',
+                    explanation: 'Le texte indique : Hier.'
+                },
+                {
+                    id: 'a2-probleme-internet-q2',
+                    type: 'radio',
+                    question: 'Visite technicien ?',
+                    options: [
+                        { id: 'a', text: 'Mardi' },
+                        { id: 'b', text: 'Mercredi 14–16 h' },
+                        { id: 'c', text: 'Vendredi' }
+                    ],
+                    correctAnswer: 'b',
+                    explanation: 'Le texte indique : Mercredi 14–16 h.'
+                }
+            ]
+        },
+        {
+            id: 'a2-recette',
+            title: 'Une recette simple',
+            content: `<p>Pour préparer une omelette, battez trois œufs avec du sel. Ajoutez des herbes.</p><p>Faites cuire 3 minutes à feu moyen. Servez avec une salade.</p>`,
+            questions: [
+                {
+                    id: 'a2-recette-q1',
+                    type: 'radio',
+                    question: 'Combien d\'œufs ?',
+                    options: [
+                        { id: 'a', text: '2' },
+                        { id: 'b', text: '3' },
+                        { id: 'c', text: '4' }
+                    ],
+                    correctAnswer: 'b',
+                    explanation: 'Le texte indique : 3.'
+                },
+                {
+                    id: 'a2-recette-q2',
+                    type: 'radio',
+                    question: 'Temps de cuisson ?',
+                    options: [
+                        { id: 'a', text: '1 min' },
+                        { id: 'b', text: '3 min' },
+                        { id: 'c', text: '10 min' }
+                    ],
+                    correctAnswer: 'b',
+                    explanation: 'Le texte indique : 3 min.'
+                }
+            ]
+        },
+        {
+            id: 'a2-bibliotheque',
+            title: 'À la bibliothèque',
+            content: `<p>La médiathèque prête des livres, des BD et des films. La carte est gratuite pour les habitants.</p><p>On peut emprunter jusqu'à huit documents pour trois semaines.</p>`,
+            questions: [
+                {
+                    id: 'a2-bibliotheque-q1',
+                    type: 'radio',
+                    question: 'Carte pour habitants ?',
+                    options: [
+                        { id: 'a', text: 'Payante' },
+                        { id: 'b', text: 'Gratuite' },
+                        { id: 'c', text: 'Réservée aux étudiants' }
+                    ],
+                    correctAnswer: 'b',
+                    explanation: 'Le texte indique : Gratuite.'
+                },
+                {
+                    id: 'a2-bibliotheque-q2',
+                    type: 'radio',
+                    question: 'Durée prêt ?',
+                    options: [
+                        { id: 'a', text: '1 semaine' },
+                        { id: 'b', text: '3 semaines' },
+                        { id: 'c', text: '2 mois' }
+                    ],
+                    correctAnswer: 'b',
+                    explanation: 'Le texte indique : 3 semaines.'
+                }
+            ]
+        },
+        {
+            id: 'a2-sport-club',
+            title: 'Club de sport',
+            content: `<p>Inès s'est inscrite à un club de natation. Les cours ont lieu mardi et jeudi à 19 h.</p><p>L'abonnement mensuel coûte 32 euros, maillot non fourni.</p>`,
+            questions: [
+                {
+                    id: 'a2-sport-club-q1',
+                    type: 'radio',
+                    question: 'Jours ?',
+                    options: [
+                        { id: 'a', text: 'Lundi/mercredi' },
+                        { id: 'b', text: 'Mardi/jeudi' },
+                        { id: 'c', text: 'Week-end' }
+                    ],
+                    correctAnswer: 'b',
+                    explanation: 'Le texte indique : Mardi/jeudi.'
+                },
+                {
+                    id: 'a2-sport-club-q2',
+                    type: 'radio',
+                    question: 'Prix mensuel ?',
+                    options: [
+                        { id: 'a', text: '22 €' },
+                        { id: 'b', text: '32 €' },
+                        { id: 'c', text: '42 €' }
+                    ],
+                    correctAnswer: 'b',
+                    explanation: 'Le texte indique : 32 €.'
+                }
+            ]
+        },
+        {
+            id: 'a2-invitation',
+            title: 'Invitation',
+            content: `<p>Chers amis, vous êtes invités à notre housewarming le 5 mai à partir de 18 h.</p><p>Apportez quelque chose à boire si possible. Adresse : 14 rue des Lilas.</p>`,
+            questions: [
+                {
+                    id: 'a2-invitation-q1',
+                    type: 'radio',
+                    question: 'Date ?',
+                    options: [
+                        { id: 'a', text: '5 avril' },
+                        { id: 'b', text: '5 mai' },
+                        { id: 'c', text: '15 mai' }
+                    ],
+                    correctAnswer: 'b',
+                    explanation: 'Le texte indique : 5 mai.'
+                },
+                {
+                    id: 'a2-invitation-q2',
+                    type: 'radio',
+                    question: 'Heure ?',
+                    options: [
+                        { id: 'a', text: '16 h' },
+                        { id: 'b', text: '18 h' },
+                        { id: 'c', text: '20 h' }
+                    ],
+                    correctAnswer: 'b',
+                    explanation: 'Le texte indique : 18 h.'
+                }
+            ]
+        },
+        {
+            id: 'a2-meteo-weekend',
+            title: 'Météo du week-end',
+            content: `<p>Samedi : ciel couvert et averses le matin. Dimanche : soleil et 19 degrés.</p><p>Conseil : prenez un parapluie samedi, mais prévoyez une balade dimanche.</p>`,
+            questions: [
+                {
+                    id: 'a2-meteo-weekend-q1',
+                    type: 'radio',
+                    question: 'Dimanche ?',
+                    options: [
+                        { id: 'a', text: 'Pluie' },
+                        { id: 'b', text: 'Soleil 19°' },
+                        { id: 'c', text: 'Neige' }
+                    ],
+                    correctAnswer: 'b',
+                    explanation: 'Le texte indique : Soleil 19°.'
+                },
+                {
+                    id: 'a2-meteo-weekend-q2',
+                    type: 'radio',
+                    question: 'Le texte est en français.',
+                    options: [
+                        { id: 'a', text: 'Vrai' },
+                        { id: 'b', text: 'Faux' },
+                        { id: 'c', text: 'On ne sait pas' }
+                    ],
+                    correctAnswer: 'a',
+                    explanation: 'Oui.'
+                }
+            ]
+        },
+        {
+            id: 'a2-travail-horaires',
+            title: 'Nouveaux horaires',
+            content: `<p>À partir de lundi, le magasin ouvre de 10 h à 19 h en semaine, et de 10 h à 20 h le samedi.</p><p>Il reste fermé le dimanche.</p>`,
+            questions: [
+                {
+                    id: 'a2-travail-horaires-q1',
+                    type: 'radio',
+                    question: 'Ouverture en semaine ?',
+                    options: [
+                        { id: 'a', text: '9–18 h' },
+                        { id: 'b', text: '10–19 h' },
+                        { id: 'c', text: '11–20 h' }
+                    ],
+                    correctAnswer: 'b',
+                    explanation: 'Le texte indique : 10–19 h.'
+                },
+                {
+                    id: 'a2-travail-horaires-q2',
+                    type: 'radio',
+                    question: 'Dimanche ?',
+                    options: [
+                        { id: 'a', text: 'Ouvert' },
+                        { id: 'b', text: 'Fermé' },
+                        { id: 'c', text: 'Sur RDV' }
+                    ],
+                    correctAnswer: 'b',
+                    explanation: 'Le texte indique : Fermé.'
+                }
+            ]
+        },
+        {
+            id: 'a2-email-pro',
+            title: 'Un e-mail professionnel',
+            content: `<p>Bonjour Madame Martin, je vous confirme notre rendez-vous jeudi à 11 h pour discuter du projet.</p><p>Pouvez-vous m'envoyer les documents avant mercredi ? Cordialement, Nora.</p>`,
+            questions: [
+                {
+                    id: 'a2-email-pro-q1',
+                    type: 'radio',
+                    question: 'Jour du RDV ?',
+                    options: [
+                        { id: 'a', text: 'Mercredi' },
+                        { id: 'b', text: 'Jeudi' },
+                        { id: 'c', text: 'Vendredi' }
+                    ],
+                    correctAnswer: 'b',
+                    explanation: 'Le texte indique : Jeudi.'
+                },
+                {
+                    id: 'a2-email-pro-q2',
+                    type: 'radio',
+                    question: 'Documents avant ?',
+                    options: [
+                        { id: 'a', text: 'Mardi' },
+                        { id: 'b', text: 'Mercredi' },
+                        { id: 'c', text: 'Jeudi' }
+                    ],
+                    correctAnswer: 'b',
+                    explanation: 'Le texte indique : Mercredi.'
+                }
+            ]
+        },
+        {
+            id: 'a2-logement',
+            title: 'Annonce de logement',
+            content: `<p>Appartement lumineux, 45 m², 2e étage sans ascenseur. Loyer : 780 euros charges comprises.</p><p>Disponible le 1er juin. Visites samedi matin sur rendez-vous.</p>`,
+            questions: [
+                {
+                    id: 'a2-logement-q1',
+                    type: 'radio',
+                    question: 'Surface ?',
+                    options: [
+                        { id: 'a', text: '35 m²' },
+                        { id: 'b', text: '45 m²' },
+                        { id: 'c', text: '55 m²' }
+                    ],
+                    correctAnswer: 'b',
+                    explanation: 'Le texte indique : 45 m².'
+                },
+                {
+                    id: 'a2-logement-q2',
+                    type: 'radio',
+                    question: 'Loyer ?',
+                    options: [
+                        { id: 'a', text: '680 €' },
+                        { id: 'b', text: '780 €' },
+                        { id: 'c', text: '880 €' }
+                    ],
+                    correctAnswer: 'b',
+                    explanation: 'Le texte indique : 780 €.'
+                }
+            ]
+        },
+        {
+            id: 'a2-cours-langue',
+            title: 'Cours de langue',
+            content: `<p>L'école propose des cours du soir d'espagnol débutant. Deux séances par semaine pendant dix semaines.</p><p>Le tarif est de 180 euros, manuel inclus.</p>`,
+            questions: [
+                {
+                    id: 'a2-cours-langue-q1',
+                    type: 'radio',
+                    question: 'Durée formation ?',
+                    options: [
+                        { id: 'a', text: '6 semaines' },
+                        { id: 'b', text: '10 semaines' },
+                        { id: 'c', text: '12 semaines' }
+                    ],
+                    correctAnswer: 'b',
+                    explanation: 'Le texte indique : 10 semaines.'
+                },
+                {
+                    id: 'a2-cours-langue-q2',
+                    type: 'radio',
+                    question: 'Tarif ?',
+                    options: [
+                        { id: 'a', text: '120 €' },
+                        { id: 'b', text: '180 €' },
+                        { id: 'c', text: '220 €' }
+                    ],
+                    correctAnswer: 'b',
+                    explanation: 'Le texte indique : 180 €.'
+                }
+            ]
+        },
+        {
+            id: 'a2-retard-livraison',
+            title: 'Livraison en retard',
+            content: `<p>Votre colis prévu mardi arrivera finalement jeudi avant 18 h.</p><p>Nous nous excusons pour ce retard lié aux conditions météo.</p>`,
+            questions: [
+                {
+                    id: 'a2-retard-livraison-q1',
+                    type: 'radio',
+                    question: 'Nouvelle livraison ?',
+                    options: [
+                        { id: 'a', text: 'Mercredi' },
+                        { id: 'b', text: 'Jeudi avant 18 h' },
+                        { id: 'c', text: 'Vendredi' }
+                    ],
+                    correctAnswer: 'b',
+                    explanation: 'Le texte indique : Jeudi avant 18 h.'
+                },
+                {
+                    id: 'a2-retard-livraison-q2',
+                    type: 'radio',
+                    question: 'Le texte est en français.',
+                    options: [
+                        { id: 'a', text: 'Vrai' },
+                        { id: 'b', text: 'Faux' },
+                        { id: 'c', text: 'On ne sait pas' }
+                    ],
+                    correctAnswer: 'a',
+                    explanation: 'Oui.'
+                }
+            ]
+        },
+        {
+            id: 'a2-sortie-musee',
+            title: 'Sortie au musée',
+            content: `<p>La classe visite le musée d'histoire naturelle mercredi. Départ à 9 h devant l'école.</p><p>Prévoir un pique-nique et des chaussures confortables.</p>`,
+            questions: [
+                {
+                    id: 'a2-sortie-musee-q1',
+                    type: 'radio',
+                    question: 'Quand ?',
+                    options: [
+                        { id: 'a', text: 'Mardi' },
+                        { id: 'b', text: 'Mercredi' },
+                        { id: 'c', text: 'Jeudi' }
+                    ],
+                    correctAnswer: 'b',
+                    explanation: 'Le texte indique : Mercredi.'
+                },
+                {
+                    id: 'a2-sortie-musee-q2',
+                    type: 'radio',
+                    question: 'Heure départ ?',
+                    options: [
+                        { id: 'a', text: '8 h' },
+                        { id: 'b', text: '9 h' },
+                        { id: 'c', text: '10 h' }
+                    ],
+                    correctAnswer: 'b',
+                    explanation: 'Le texte indique : 9 h.'
+                }
+            ]
+        },
+        {
+            id: 'a2-sante',
+            title: 'Conseils santé',
+            content: `<p>Pour mieux dormir, évitez les écrans une heure avant le coucher.</p><p>Buvez de l'eau régulièrement et marchez au moins 20 minutes par jour.</p>`,
+            questions: [
+                {
+                    id: 'a2-sante-q1',
+                    type: 'radio',
+                    question: 'Marche recommandée ?',
+                    options: [
+                        { id: 'a', text: '10 min' },
+                        { id: 'b', text: '20 min' },
+                        { id: 'c', text: '1 h' }
+                    ],
+                    correctAnswer: 'b',
+                    explanation: 'Le texte indique : 20 min.'
+                },
+                {
+                    id: 'a2-sante-q2',
+                    type: 'radio',
+                    question: 'Le texte est en français.',
+                    options: [
+                        { id: 'a', text: 'Vrai' },
+                        { id: 'b', text: 'Faux' },
+                        { id: 'c', text: 'On ne sait pas' }
+                    ],
+                    correctAnswer: 'a',
+                    explanation: 'Oui.'
+                }
+            ]
+        },
+        {
+            id: 'a2-fete-quartier',
+            title: 'Fête de quartier',
+            content: `<p>La fête des voisins a lieu vendredi soir dans la cour. Buffet partagé à 19 h 30.</p><p>Une tombola financera les plantes du jardin collectif.</p>`,
+            questions: [
+                {
+                    id: 'a2-fete-quartier-q1',
+                    type: 'radio',
+                    question: 'Quand ?',
+                    options: [
+                        { id: 'a', text: 'Jeudi' },
+                        { id: 'b', text: 'Vendredi soir' },
+                        { id: 'c', text: 'Samedi' }
+                    ],
+                    correctAnswer: 'b',
+                    explanation: 'Le texte indique : Vendredi soir.'
+                },
+                {
+                    id: 'a2-fete-quartier-q2',
+                    type: 'radio',
+                    question: 'Le texte est en français.',
+                    options: [
+                        { id: 'a', text: 'Vrai' },
+                        { id: 'b', text: 'Faux' },
+                        { id: 'c', text: 'On ne sait pas' }
+                    ],
+                    correctAnswer: 'a',
+                    explanation: 'Oui.'
+                }
+            ]
+        },
+        {
+            id: 'a2-permis',
+            title: 'Le permis',
+            content: `<p>Après trois essais, Camille a obtenu son permis de conduire.</p><p>Elle loue une petite voiture le week-end pour rendre visite à sa grand-mère.</p>`,
+            questions: [
+                {
+                    id: 'a2-permis-q1',
+                    type: 'radio',
+                    question: 'Après combien d\'essais ?',
+                    options: [
+                        { id: 'a', text: '1' },
+                        { id: 'b', text: '2' },
+                        { id: 'c', text: '3' }
+                    ],
+                    correctAnswer: 'c',
+                    explanation: 'Le texte indique : 3.'
+                },
+                {
+                    id: 'a2-permis-q2',
+                    type: 'radio',
+                    question: 'Le texte est en français.',
+                    options: [
+                        { id: 'a', text: 'Vrai' },
+                        { id: 'b', text: 'Faux' },
+                        { id: 'c', text: 'On ne sait pas' }
+                    ],
+                    correctAnswer: 'a',
+                    explanation: 'Oui.'
+                }
+            ]
+        },
+        {
+            id: 'a2-covoiturage',
+            title: 'Covoiturage',
+            content: `<p>Paul propose un covoiturage Lyon–Grenoble dimanche à 17 h. Deux places disponibles.</p><p>Participation : 8 euros par personne.</p>`,
+            questions: [
+                {
+                    id: 'a2-covoiturage-q1',
+                    type: 'radio',
+                    question: 'Places ?',
+                    options: [
+                        { id: 'a', text: '1' },
+                        { id: 'b', text: '2' },
+                        { id: 'c', text: '3' }
+                    ],
+                    correctAnswer: 'b',
+                    explanation: 'Le texte indique : 2.'
+                },
+                {
+                    id: 'a2-covoiturage-q2',
+                    type: 'radio',
+                    question: 'Participation ?',
+                    options: [
+                        { id: 'a', text: '5 €' },
+                        { id: 'b', text: '8 €' },
+                        { id: 'c', text: '12 €' }
+                    ],
+                    correctAnswer: 'b',
+                    explanation: 'Le texte indique : 8 €.'
+                }
+            ]
         }
     ],
     'B1': [
@@ -1720,6 +2972,626 @@ const readingData = {
                     question: 'Quel est le nom du cadre qui définit les niveaux de maîtrise des langues de A1 à C2 ?',
                     correctAnswer: 'Cadre Européen Commun de Référence pour les Langues',
                     explanation: 'Selon le texte, le Cadre Européen Commun de Référence pour les Langues (CECRL) définit des niveaux de maîtrise précis, de A1 (débutant) à C2 (maîtrise).'
+                }
+            ]
+        },
+        {
+            id: 'b1-teletravail',
+            title: 'Le télétravail',
+            content: `<p>Depuis la pandémie, beaucoup d'entreprises ont adopté un modèle hybride.</p><p>Les salariés viennent au bureau deux ou trois jours par semaine et travaillent le reste du temps à domicile.</p><p>Ce système réduit les trajets, mais demande une bonne organisation.</p>`,
+            questions: [
+                {
+                    id: 'b1-teletravail-q1',
+                    type: 'radio',
+                    question: 'Modèle décrit ?',
+                    options: [
+                        { id: 'a', text: '100 % bureau' },
+                        { id: 'b', text: 'Hybride' },
+                        { id: 'c', text: '100 % remote imposé' }
+                    ],
+                    correctAnswer: 'b',
+                    explanation: 'Le texte indique : Hybride.'
+                },
+                {
+                    id: 'b1-teletravail-q2',
+                    type: 'radio',
+                    question: 'Avantage cité ?',
+                    options: [
+                        { id: 'a', text: 'Moins de trajets' },
+                        { id: 'b', text: 'Plus de réunions inutiles' },
+                        { id: 'c', text: 'Salaires plus bas' }
+                    ],
+                    correctAnswer: 'a',
+                    explanation: 'Le texte indique : Moins de trajets.'
+                }
+            ]
+        },
+        {
+            id: 'b1-environnement',
+            title: 'Tri des déchets',
+            content: `<p>La ville impose désormais le tri des biodéchets. Des bacs bruns sont distribués gratuitement.</p><p>Les habitants doivent les sortir le mardi soir. Des amendes sont prévues en cas de non-respect après une période d'adaptation.</p>`,
+            questions: [
+                {
+                    id: 'b1-environnement-q1',
+                    type: 'radio',
+                    question: 'Jour de sortie ?',
+                    options: [
+                        { id: 'a', text: 'Lundi' },
+                        { id: 'b', text: 'Mardi soir' },
+                        { id: 'c', text: 'Vendredi' }
+                    ],
+                    correctAnswer: 'b',
+                    explanation: 'Le texte indique : Mardi soir.'
+                },
+                {
+                    id: 'b1-environnement-q2',
+                    type: 'radio',
+                    question: 'Bacs ?',
+                    options: [
+                        { id: 'a', text: 'Payants' },
+                        { id: 'b', text: 'Gratuits' },
+                        { id: 'c', text: 'Réservés aux commerces' }
+                    ],
+                    correctAnswer: 'b',
+                    explanation: 'Le texte indique : Gratuits.'
+                }
+            ]
+        },
+        {
+            id: 'b1-entretien',
+            title: 'Entretien d\'embauche',
+            content: `<p>Clara prépare un entretien pour un poste de chargée de communication.</p><p>Elle a étudié les valeurs de l'entreprise et préparé des exemples concrets de projets.</p><p>Le recruteur lui a demandé d'arriver quinze minutes en avance.</p>`,
+            questions: [
+                {
+                    id: 'b1-entretien-q1',
+                    type: 'radio',
+                    question: 'Poste ?',
+                    options: [
+                        { id: 'a', text: 'Comptable' },
+                        { id: 'b', text: 'Chargée de communication' },
+                        { id: 'c', text: 'Développeuse' }
+                    ],
+                    correctAnswer: 'b',
+                    explanation: 'Le texte indique : Chargée de communication.'
+                },
+                {
+                    id: 'b1-entretien-q2',
+                    type: 'radio',
+                    question: 'Avance demandée ?',
+                    options: [
+                        { id: 'a', text: '5 min' },
+                        { id: 'b', text: '15 min' },
+                        { id: 'c', text: '30 min' }
+                    ],
+                    correctAnswer: 'b',
+                    explanation: 'Le texte indique : 15 min.'
+                }
+            ]
+        },
+        {
+            id: 'b1-logement-etudiant',
+            title: 'Logement étudiant',
+            content: `<p>Les résidences universitaires sont saturées cette année. Beaucoup d'étudiants se tournent vers la colocation.</p><p>Les loyers ont augmenté d'environ 8 % dans le centre. La mairie ouvre une permanence d'aide à la recherche.</p>`,
+            questions: [
+                {
+                    id: 'b1-logement-etudiant-q1',
+                    type: 'radio',
+                    question: 'Hausse des loyers ?',
+                    options: [
+                        { id: 'a', text: '3 %' },
+                        { id: 'b', text: '8 %' },
+                        { id: 'c', text: '18 %' }
+                    ],
+                    correctAnswer: 'b',
+                    explanation: 'Le texte indique : 8 %.'
+                },
+                {
+                    id: 'b1-logement-etudiant-q2',
+                    type: 'radio',
+                    question: 'Solution fréquente ?',
+                    options: [
+                        { id: 'a', text: 'Acheter' },
+                        { id: 'b', text: 'Colocation' },
+                        { id: 'c', text: 'Abandonner les études' }
+                    ],
+                    correctAnswer: 'b',
+                    explanation: 'Le texte indique : Colocation.'
+                }
+            ]
+        },
+        {
+            id: 'b1-reseaux',
+            title: 'Réseaux sociaux',
+            content: `<p>Passer trop de temps sur les réseaux peut réduire la concentration.</p><p>Des chercheurs recommandent de désactiver les notifications pendant les plages de travail.</p><p>Certaines écoles organisent des ateliers d'esprit critique face aux fausses informations.</p>`,
+            questions: [
+                {
+                    id: 'b1-reseaux-q1',
+                    type: 'radio',
+                    question: 'Conseil principal ?',
+                    options: [
+                        { id: 'a', text: 'Plus de notifications' },
+                        { id: 'b', text: 'Désactiver les notifications au travail' },
+                        { id: 'c', text: 'Supprimer Internet' }
+                    ],
+                    correctAnswer: 'b',
+                    explanation: 'Le texte indique : Désactiver les notifications au travail.'
+                },
+                {
+                    id: 'b1-reseaux-q2',
+                    type: 'radio',
+                    question: 'Le texte est en français.',
+                    options: [
+                        { id: 'a', text: 'Vrai' },
+                        { id: 'b', text: 'Faux' },
+                        { id: 'c', text: 'On ne sait pas' }
+                    ],
+                    correctAnswer: 'a',
+                    explanation: 'Oui.'
+                }
+            ]
+        },
+        {
+            id: 'b1-greve',
+            title: 'Jour de grève',
+            content: `<p>Une grève des transports est annoncée jeudi. Les bus circuleront de façon très limitée.</p><p>L'entreprise autorise le télétravail et reporte les réunions non urgentes.</p><p>Les salariés doivent indiquer leur mode de travail avant mercredi midi.</p>`,
+            questions: [
+                {
+                    id: 'b1-greve-q1',
+                    type: 'radio',
+                    question: 'Jour de grève ?',
+                    options: [
+                        { id: 'a', text: 'Mercredi' },
+                        { id: 'b', text: 'Jeudi' },
+                        { id: 'c', text: 'Vendredi' }
+                    ],
+                    correctAnswer: 'b',
+                    explanation: 'Le texte indique : Jeudi.'
+                },
+                {
+                    id: 'b1-greve-q2',
+                    type: 'radio',
+                    question: 'Déclaration avant ?',
+                    options: [
+                        { id: 'a', text: 'Mardi soir' },
+                        { id: 'b', text: 'Mercredi midi' },
+                        { id: 'c', text: 'Jeudi matin' }
+                    ],
+                    correctAnswer: 'b',
+                    explanation: 'Le texte indique : Mercredi midi.'
+                }
+            ]
+        },
+        {
+            id: 'b1-consommation',
+            title: 'Consommation responsable',
+            content: `<p>Acheter d'occasion permet de réduire les déchets et d'économiser de l'argent.</p><p>Des applications facilitent la vente entre particuliers. Cependant, il faut vérifier l'état des objets et les conditions de retour.</p>`,
+            questions: [
+                {
+                    id: 'b1-consommation-q1',
+                    type: 'radio',
+                    question: 'Avantages cités ?',
+                    options: [
+                        { id: 'a', text: 'Uniquement le prestige' },
+                        { id: 'b', text: 'Moins de déchets et économies' },
+                        { id: 'c', text: 'Livraison plus lente' }
+                    ],
+                    correctAnswer: 'b',
+                    explanation: 'Le texte indique : Moins de déchets et économies.'
+                },
+                {
+                    id: 'b1-consommation-q2',
+                    type: 'radio',
+                    question: 'Le texte est en français.',
+                    options: [
+                        { id: 'a', text: 'Vrai' },
+                        { id: 'b', text: 'Faux' },
+                        { id: 'c', text: 'On ne sait pas' }
+                    ],
+                    correctAnswer: 'a',
+                    explanation: 'Oui.'
+                }
+            ]
+        },
+        {
+            id: 'b1-formation',
+            title: 'Formation continue',
+            content: `<p>Après cinq ans dans le même poste, Marc suit une formation en gestion de projet le soir.</p><p>Son entreprise finance 70 % des frais. En échange, il s'engage à rester un an.</p>`,
+            questions: [
+                {
+                    id: 'b1-formation-q1',
+                    type: 'radio',
+                    question: 'Financement entreprise ?',
+                    options: [
+                        { id: 'a', text: '50 %' },
+                        { id: 'b', text: '70 %' },
+                        { id: 'c', text: '100 %' }
+                    ],
+                    correctAnswer: 'b',
+                    explanation: 'Le texte indique : 70 %.'
+                },
+                {
+                    id: 'b1-formation-q2',
+                    type: 'radio',
+                    question: 'Engagement ?',
+                    options: [
+                        { id: 'a', text: '6 mois' },
+                        { id: 'b', text: '1 an' },
+                        { id: 'c', text: '3 ans' }
+                    ],
+                    correctAnswer: 'b',
+                    explanation: 'Le texte indique : 1 an.'
+                }
+            ]
+        },
+        {
+            id: 'b1-sante-travail',
+            title: 'Santé au travail',
+            content: `<p>Le stress prolongé peut entraîner des troubles du sommeil.</p><p>Les médecins du travail conseillent de poser des limites claires entre vie professionnelle et vie personnelle.</p><p>Certaines sociétés proposent des séances de sophrologie.</p>`,
+            questions: [
+                {
+                    id: 'b1-sante-travail-q1',
+                    type: 'radio',
+                    question: 'Conseil clé ?',
+                    options: [
+                        { id: 'a', text: 'Travailler plus tard' },
+                        { id: 'b', text: 'Limiter les frontières vie pro/perso' },
+                        { id: 'c', text: 'Ignorer le stress' }
+                    ],
+                    correctAnswer: 'b',
+                    explanation: 'Le texte indique : Limiter les frontières vie pro/perso.'
+                },
+                {
+                    id: 'b1-sante-travail-q2',
+                    type: 'radio',
+                    question: 'Le texte est en français.',
+                    options: [
+                        { id: 'a', text: 'Vrai' },
+                        { id: 'b', text: 'Faux' },
+                        { id: 'c', text: 'On ne sait pas' }
+                    ],
+                    correctAnswer: 'a',
+                    explanation: 'Oui.'
+                }
+            ]
+        },
+        {
+            id: 'b1-tourisme',
+            title: 'Tourisme local',
+            content: `<p>Plutôt que de prendre l'avion pour un week-end, de plus en plus de Français explorent leur région.</p><p>Les offices de tourisme mettent en avant des sentiers, des marchés et des musées peu connus.</p><p>Cette tendance soutient l'économie locale.</p>`,
+            questions: [
+                {
+                    id: 'b1-tourisme-q1',
+                    type: 'radio',
+                    question: 'Tendance ?',
+                    options: [
+                        { id: 'a', text: 'Plus d\'avions courts' },
+                        { id: 'b', text: 'Explorer sa région' },
+                        { id: 'c', text: 'Abandonner les vacances' }
+                    ],
+                    correctAnswer: 'b',
+                    explanation: 'Le texte indique : Explorer sa région.'
+                },
+                {
+                    id: 'b1-tourisme-q2',
+                    type: 'radio',
+                    question: 'Le texte est en français.',
+                    options: [
+                        { id: 'a', text: 'Vrai' },
+                        { id: 'b', text: 'Faux' },
+                        { id: 'c', text: 'On ne sait pas' }
+                    ],
+                    correctAnswer: 'a',
+                    explanation: 'Oui.'
+                }
+            ]
+        },
+        {
+            id: 'b1-alimentation',
+            title: 'Manger local',
+            content: `<p>Un collectif ouvre une épicerie coopérative qui vend surtout des produits locaux de saison.</p><p>Les adhérents participent trois heures par mois aux rayons. Les prix restent accessibles grâce au bénévolat.</p>`,
+            questions: [
+                {
+                    id: 'b1-alimentation-q1',
+                    type: 'radio',
+                    question: 'Participation ?',
+                    options: [
+                        { id: 'a', text: '1 h/mois' },
+                        { id: 'b', text: '3 h/mois' },
+                        { id: 'c', text: '10 h/mois' }
+                    ],
+                    correctAnswer: 'b',
+                    explanation: 'Le texte indique : 3 h/mois.'
+                },
+                {
+                    id: 'b1-alimentation-q2',
+                    type: 'radio',
+                    question: 'Le texte est en français.',
+                    options: [
+                        { id: 'a', text: 'Vrai' },
+                        { id: 'b', text: 'Faux' },
+                        { id: 'c', text: 'On ne sait pas' }
+                    ],
+                    correctAnswer: 'a',
+                    explanation: 'Oui.'
+                }
+            ]
+        },
+        {
+            id: 'b1-numerique',
+            title: 'Démarches en ligne',
+            content: `<p>De nombreuses démarches administratives se font désormais en ligne.</p><p>Pour les personnes peu à l'aise avec le numérique, des médiateurs numériques aident gratuitement en bibliothèque le mercredi.</p>`,
+            questions: [
+                {
+                    id: 'b1-numerique-q1',
+                    type: 'radio',
+                    question: 'Aide où ?',
+                    options: [
+                        { id: 'a', text: 'À la banque' },
+                        { id: 'b', text: 'En bibliothèque le mercredi' },
+                        { id: 'c', text: 'Uniquement par téléphone payant' }
+                    ],
+                    correctAnswer: 'b',
+                    explanation: 'Le texte indique : En bibliothèque le mercredi.'
+                },
+                {
+                    id: 'b1-numerique-q2',
+                    type: 'radio',
+                    question: 'Le texte est en français.',
+                    options: [
+                        { id: 'a', text: 'Vrai' },
+                        { id: 'b', text: 'Faux' },
+                        { id: 'c', text: 'On ne sait pas' }
+                    ],
+                    correctAnswer: 'a',
+                    explanation: 'Oui.'
+                }
+            ]
+        },
+        {
+            id: 'b1-mobilite',
+            title: 'Mobilité douce',
+            content: `<p>La ville crée 12 km de pistes cyclables sécurisées cette année.</p><p>Un service de vélos électriques en libre-service sera lancé en septembre.</p><p>L'objectif est de réduire la pollution liée aux voitures individuelles.</p>`,
+            questions: [
+                {
+                    id: 'b1-mobilite-q1',
+                    type: 'radio',
+                    question: 'Km de pistes ?',
+                    options: [
+                        { id: 'a', text: '2' },
+                        { id: 'b', text: '12' },
+                        { id: 'c', text: '120' }
+                    ],
+                    correctAnswer: 'b',
+                    explanation: 'Le texte indique : 12.'
+                },
+                {
+                    id: 'b1-mobilite-q2',
+                    type: 'radio',
+                    question: 'Lancement vélos ?',
+                    options: [
+                        { id: 'a', text: 'Juin' },
+                        { id: 'b', text: 'Septembre' },
+                        { id: 'c', text: 'Décembre' }
+                    ],
+                    correctAnswer: 'b',
+                    explanation: 'Le texte indique : Septembre.'
+                }
+            ]
+        },
+        {
+            id: 'b1-culture',
+            title: 'Festival',
+            content: `<p>Le festival des arts de rue attire chaque année près de 40 000 visiteurs.</p><p>Cette édition met l'accent sur les artistes émergents et la gratuité de la plupart des spectacles.</p><p>Des navettes gratuites relient le parking au centre.</p>`,
+            questions: [
+                {
+                    id: 'b1-culture-q1',
+                    type: 'radio',
+                    question: 'Visiteurs ?',
+                    options: [
+                        { id: 'a', text: '4 000' },
+                        { id: 'b', text: '40 000' },
+                        { id: 'c', text: '400 000' }
+                    ],
+                    correctAnswer: 'b',
+                    explanation: 'Le texte indique : 40 000.'
+                },
+                {
+                    id: 'b1-culture-q2',
+                    type: 'radio',
+                    question: 'Le texte est en français.',
+                    options: [
+                        { id: 'a', text: 'Vrai' },
+                        { id: 'b', text: 'Faux' },
+                        { id: 'c', text: 'On ne sait pas' }
+                    ],
+                    correctAnswer: 'a',
+                    explanation: 'Oui.'
+                }
+            ]
+        },
+        {
+            id: 'b1-logement-energie',
+            title: 'Facture d\'énergie',
+            content: `<p>Pour baisser sa facture, Lina a installé un thermostat programmable et remplacé ses ampoules.</p><p>Elle baisse le chauffage d'un degré la nuit. En un hiver, elle a économisé près de 15 %.</p>`,
+            questions: [
+                {
+                    id: 'b1-logement-energie-q1',
+                    type: 'radio',
+                    question: 'Économie ?',
+                    options: [
+                        { id: 'a', text: '5 %' },
+                        { id: 'b', text: '15 %' },
+                        { id: 'c', text: '50 %' }
+                    ],
+                    correctAnswer: 'b',
+                    explanation: 'Le texte indique : 15 %.'
+                },
+                {
+                    id: 'b1-logement-energie-q2',
+                    type: 'radio',
+                    question: 'Le texte est en français.',
+                    options: [
+                        { id: 'a', text: 'Vrai' },
+                        { id: 'b', text: 'Faux' },
+                        { id: 'c', text: 'On ne sait pas' }
+                    ],
+                    correctAnswer: 'a',
+                    explanation: 'Oui.'
+                }
+            ]
+        },
+        {
+            id: 'b1-presse',
+            title: 'Lire la presse',
+            content: `<p>Comparer plusieurs sources d'information aide à repérer les approximations.</p><p>Un article sérieux cite ses sources et distingue faits et opinions.</p><p>Les titres sensationnels ne garantissent pas la qualité du contenu.</p>`,
+            questions: [
+                {
+                    id: 'b1-presse-q1',
+                    type: 'radio',
+                    question: 'Que faire ?',
+                    options: [
+                        { id: 'a', text: 'Lire une seule source' },
+                        { id: 'b', text: 'Comparer plusieurs sources' },
+                        { id: 'c', text: 'Croire tous les titres' }
+                    ],
+                    correctAnswer: 'b',
+                    explanation: 'Le texte indique : Comparer plusieurs sources.'
+                },
+                {
+                    id: 'b1-presse-q2',
+                    type: 'radio',
+                    question: 'Le texte est en français.',
+                    options: [
+                        { id: 'a', text: 'Vrai' },
+                        { id: 'b', text: 'Faux' },
+                        { id: 'c', text: 'On ne sait pas' }
+                    ],
+                    correctAnswer: 'a',
+                    explanation: 'Oui.'
+                }
+            ]
+        },
+        {
+            id: 'b1-asso-benevolat',
+            title: 'Bénévolat',
+            content: `<p>Chaque samedi, des bénévoles distribuent des repas près de la gare.</p><p>Une formation courte de sécurité alimentaire est obligatoire avant la première mission.</p><p>L'association cherche aussi des chauffeurs le soir.</p>`,
+            questions: [
+                {
+                    id: 'b1-asso-benevolat-q1',
+                    type: 'radio',
+                    question: 'Formation ?',
+                    options: [
+                        { id: 'a', text: 'Optionnelle' },
+                        { id: 'b', text: 'Obligatoire avant la 1re mission' },
+                        { id: 'c', text: 'Payante et longue' }
+                    ],
+                    correctAnswer: 'b',
+                    explanation: 'Le texte indique : Obligatoire avant la 1re mission.'
+                },
+                {
+                    id: 'b1-asso-benevolat-q2',
+                    type: 'radio',
+                    question: 'Le texte est en français.',
+                    options: [
+                        { id: 'a', text: 'Vrai' },
+                        { id: 'b', text: 'Faux' },
+                        { id: 'c', text: 'On ne sait pas' }
+                    ],
+                    correctAnswer: 'a',
+                    explanation: 'Oui.'
+                }
+            ]
+        },
+        {
+            id: 'b1-etudes',
+            title: 'Choisir ses études',
+            content: `<p>Avant de choisir une filière, il est utile de faire des stages d'observation.</p><p>Les salons d'orientation permettent de poser des questions aux étudiants et aux professionnels.</p><p>Il n'existe pas de parcours unique vers la réussite.</p>`,
+            questions: [
+                {
+                    id: 'b1-etudes-q1',
+                    type: 'radio',
+                    question: 'Conseil ?',
+                    options: [
+                        { id: 'a', text: 'Choisir au hasard' },
+                        { id: 'b', text: 'Faire des stages d\'observation' },
+                        { id: 'c', text: 'Ignorer les salons' }
+                    ],
+                    correctAnswer: 'b',
+                    explanation: 'Le texte indique : Faire des stages d\'observation.'
+                },
+                {
+                    id: 'b1-etudes-q2',
+                    type: 'radio',
+                    question: 'Le texte est en français.',
+                    options: [
+                        { id: 'a', text: 'Vrai' },
+                        { id: 'b', text: 'Faux' },
+                        { id: 'c', text: 'On ne sait pas' }
+                    ],
+                    correctAnswer: 'a',
+                    explanation: 'Oui.'
+                }
+            ]
+        },
+        {
+            id: 'b1-conso-eau',
+            title: 'Économiser l\'eau',
+            content: `<p>Installer un mousseur sur les robinets peut réduire la consommation sans perte de confort.</p><p>Réparer rapidement une fuite évite le gaspillage. La collectivité propose des kits gratuits aux foyers.</p>`,
+            questions: [
+                {
+                    id: 'b1-conso-eau-q1',
+                    type: 'radio',
+                    question: 'Kits ?',
+                    options: [
+                        { id: 'a', text: 'Payants' },
+                        { id: 'b', text: 'Gratuits pour les foyers' },
+                        { id: 'c', text: 'Réservés aux hôtels' }
+                    ],
+                    correctAnswer: 'b',
+                    explanation: 'Le texte indique : Gratuits pour les foyers.'
+                },
+                {
+                    id: 'b1-conso-eau-q2',
+                    type: 'radio',
+                    question: 'Le texte est en français.',
+                    options: [
+                        { id: 'a', text: 'Vrai' },
+                        { id: 'b', text: 'Faux' },
+                        { id: 'c', text: 'On ne sait pas' }
+                    ],
+                    correctAnswer: 'a',
+                    explanation: 'Oui.'
+                }
+            ]
+        },
+        {
+            id: 'b1-reunion',
+            title: 'Compte rendu de réunion',
+            content: `<p>Lors de la réunion, l'équipe a décidé de reporter le lancement au 12 octobre.</p><p>Deux tâches restent ouvertes : finaliser la brochure et tester le site mobile.</p><p>Prochaine réunion : lundi 10 h en visioconférence.</p>`,
+            questions: [
+                {
+                    id: 'b1-reunion-q1',
+                    type: 'radio',
+                    question: 'Nouveau lancement ?',
+                    options: [
+                        { id: 'a', text: '12 septembre' },
+                        { id: 'b', text: '12 octobre' },
+                        { id: 'c', text: '12 novembre' }
+                    ],
+                    correctAnswer: 'b',
+                    explanation: 'Le texte indique : 12 octobre.'
+                },
+                {
+                    id: 'b1-reunion-q2',
+                    type: 'radio',
+                    question: 'Le texte est en français.',
+                    options: [
+                        { id: 'a', text: 'Vrai' },
+                        { id: 'b', text: 'Faux' },
+                        { id: 'c', text: 'On ne sait pas' }
+                    ],
+                    correctAnswer: 'a',
+                    explanation: 'Oui.'
                 }
             ]
         }
@@ -2283,6 +4155,626 @@ const readingData = {
                     explanation: 'Selon le texte, Marie Kondo est la personnalité associée à la méthode du "rangement qui change la vie", qui invite à ne conserver que les objets qui "suscitent la joie" ou qui servent véritablement au quotidien.'
                 }
             ]
+        },
+        {
+            id: 'b2-ia',
+            title: 'L\'IA au travail',
+            content: `<p>L'intelligence artificielle transforme certaines tâches répétitives, mais elle ne remplace pas le jugement humain.</p><p>Les entreprises doivent former leurs équipes à vérifier les résultats produits par les outils automatiques.</p><p>La question de la responsabilité reste centrale lorsqu'une décision affecte des clients.</p>`,
+            questions: [
+                {
+                    id: 'b2-ia-q1',
+                    type: 'radio',
+                    question: 'Que ne remplace pas l\'IA ?',
+                    options: [
+                        { id: 'a', text: 'Les e-mails' },
+                        { id: 'b', text: 'Le jugement humain' },
+                        { id: 'c', text: 'Les tableurs' }
+                    ],
+                    correctAnswer: 'b',
+                    explanation: 'Le texte indique : Le jugement humain.'
+                },
+                {
+                    id: 'b2-ia-q2',
+                    type: 'radio',
+                    question: 'Point central ?',
+                    options: [
+                        { id: 'a', text: 'La couleur du logo' },
+                        { id: 'b', text: 'La responsabilité' },
+                        { id: 'c', text: 'Le prix des écrans' }
+                    ],
+                    correctAnswer: 'b',
+                    explanation: 'Le texte indique : La responsabilité.'
+                }
+            ]
+        },
+        {
+            id: 'b2-climat',
+            title: 'Adaptation climatique',
+            content: `<p>Les villes doivent adapter leurs infrastructures aux canicules et aux pluies intenses.</p><p>Végétaliser les cours d'école, créer des îlots de fraîcheur et rénover les réseaux d'eau font partie des mesures concrètes.</p><p>Sans anticipation, les coûts sociaux et économiques augmentent.</p>`,
+            questions: [
+                {
+                    id: 'b2-climat-q1',
+                    type: 'radio',
+                    question: 'Mesure citée ?',
+                    options: [
+                        { id: 'a', text: 'Supprimer les arbres' },
+                        { id: 'b', text: 'Végétaliser les cours d\'école' },
+                        { id: 'c', text: 'Interdire l\'eau potable' }
+                    ],
+                    correctAnswer: 'b',
+                    explanation: 'Le texte indique : Végétaliser les cours d\'école.'
+                },
+                {
+                    id: 'b2-climat-q2',
+                    type: 'radio',
+                    question: 'Le texte est en français.',
+                    options: [
+                        { id: 'a', text: 'Vrai' },
+                        { id: 'b', text: 'Faux' },
+                        { id: 'c', text: 'On ne sait pas' }
+                    ],
+                    correctAnswer: 'a',
+                    explanation: 'Oui.'
+                }
+            ]
+        },
+        {
+            id: 'b2-medias',
+            title: 'Médias et attention',
+            content: `<p>L'économie de l'attention pousse les plateformes à maximiser le temps passé devant l'écran.</p><p>Cette logique peut favoriser les contenus polarisants. Développer son esprit critique devient une compétence citoyenne.</p><p>Des régulations tentent d'imposer plus de transparence sur les algorithmes.</p>`,
+            questions: [
+                {
+                    id: 'b2-medias-q1',
+                    type: 'radio',
+                    question: 'Risque évoqué ?',
+                    options: [
+                        { id: 'a', text: 'Contenus polarisants' },
+                        { id: 'b', text: 'Moins d\'écrans' },
+                        { id: 'c', text: 'Fin d\'Internet' }
+                    ],
+                    correctAnswer: 'a',
+                    explanation: 'Le texte indique : Contenus polarisants.'
+                },
+                {
+                    id: 'b2-medias-q2',
+                    type: 'radio',
+                    question: 'Le texte est en français.',
+                    options: [
+                        { id: 'a', text: 'Vrai' },
+                        { id: 'b', text: 'Faux' },
+                        { id: 'c', text: 'On ne sait pas' }
+                    ],
+                    correctAnswer: 'a',
+                    explanation: 'Oui.'
+                }
+            ]
+        },
+        {
+            id: 'b2-education',
+            title: 'Évaluation scolaire',
+            content: `<p>Remplacer une partie des notes chiffrées par des commentaires détaillés vise à réduire le stress.</p><p>Les parents restent partagés : certains y voient plus de clarté pédagogique, d'autres craignent un manque de repères pour l'orientation.</p><p>Les établissements expérimentateurs organisent des réunions d'explication.</p>`,
+            questions: [
+                {
+                    id: 'b2-education-q1',
+                    type: 'radio',
+                    question: 'Objectif ?',
+                    options: [
+                        { id: 'a', text: 'Augmenter le stress' },
+                        { id: 'b', text: 'Réduire le stress via commentaires' },
+                        { id: 'c', text: 'Supprimer l\'école' }
+                    ],
+                    correctAnswer: 'b',
+                    explanation: 'Le texte indique : Réduire le stress via commentaires.'
+                },
+                {
+                    id: 'b2-education-q2',
+                    type: 'radio',
+                    question: 'Le texte est en français.',
+                    options: [
+                        { id: 'a', text: 'Vrai' },
+                        { id: 'b', text: 'Faux' },
+                        { id: 'c', text: 'On ne sait pas' }
+                    ],
+                    correctAnswer: 'a',
+                    explanation: 'Oui.'
+                }
+            ]
+        },
+        {
+            id: 'b2-ville',
+            title: 'Ville du quart d\'heure',
+            content: `<p>Le concept vise à rendre accessibles les services essentiels en moins de quinze minutes à pied ou à vélo.</p><p>Cela implique densifier certains services de proximité. Une critique fréquente concerne le risque de hausse des loyers dans les quartiers bien équipés.</p>`,
+            questions: [
+                {
+                    id: 'b2-ville-q1',
+                    type: 'radio',
+                    question: 'Objectif temps ?',
+                    options: [
+                        { id: 'a', text: '5 min en voiture' },
+                        { id: 'b', text: '~15 min à pied/vélo' },
+                        { id: 'c', text: '1 h de transport' }
+                    ],
+                    correctAnswer: 'b',
+                    explanation: 'Le texte indique : ~15 min à pied/vélo.'
+                },
+                {
+                    id: 'b2-ville-q2',
+                    type: 'radio',
+                    question: 'Le texte est en français.',
+                    options: [
+                        { id: 'a', text: 'Vrai' },
+                        { id: 'b', text: 'Faux' },
+                        { id: 'c', text: 'On ne sait pas' }
+                    ],
+                    correctAnswer: 'a',
+                    explanation: 'Oui.'
+                }
+            ]
+        },
+        {
+            id: 'b2-travail',
+            title: 'Sens au travail',
+            content: `<p>De plus en plus de salariés cherchent un emploi aligné avec leurs valeurs.</p><p>Les entreprises qui communiquent sur leur impact sans preuves s'exposent au soupçon de greenwashing.</p><p>La qualité du management quotidien reste souvent plus décisive que les grands discours.</p>`,
+            questions: [
+                {
+                    id: 'b2-travail-q1',
+                    type: 'radio',
+                    question: 'Risque de com\' sans preuves ?',
+                    options: [
+                        { id: 'a', text: 'Greenwashing' },
+                        { id: 'b', text: 'Hausse automatique des salaires' },
+                        { id: 'c', text: 'Aucun' }
+                    ],
+                    correctAnswer: 'a',
+                    explanation: 'Le texte indique : Greenwashing.'
+                },
+                {
+                    id: 'b2-travail-q2',
+                    type: 'radio',
+                    question: 'Le texte est en français.',
+                    options: [
+                        { id: 'a', text: 'Vrai' },
+                        { id: 'b', text: 'Faux' },
+                        { id: 'c', text: 'On ne sait pas' }
+                    ],
+                    correctAnswer: 'a',
+                    explanation: 'Oui.'
+                }
+            ]
+        },
+        {
+            id: 'b2-science',
+            title: 'Confiance scientifique',
+            content: `<p>La confiance dans la science se construit par la méthode, la reproduction des résultats et la transparence sur l'incertitude.</p><p>Simplifier à l'excès peut créer de fausses certitudes. À l'inverse, trop d'hésitation peut freiner l'action publique.</p><p>La médiation scientifique joue un rôle d'équilibre.</p>`,
+            questions: [
+                {
+                    id: 'b2-science-q1',
+                    type: 'radio',
+                    question: 'Rôle clé ?',
+                    options: [
+                        { id: 'a', text: 'Médiation scientifique' },
+                        { id: 'b', text: 'Supprimer la recherche' },
+                        { id: 'c', text: 'Cacher l\'incertitude' }
+                    ],
+                    correctAnswer: 'a',
+                    explanation: 'Le texte indique : Médiation scientifique.'
+                },
+                {
+                    id: 'b2-science-q2',
+                    type: 'radio',
+                    question: 'Le texte est en français.',
+                    options: [
+                        { id: 'a', text: 'Vrai' },
+                        { id: 'b', text: 'Faux' },
+                        { id: 'c', text: 'On ne sait pas' }
+                    ],
+                    correctAnswer: 'a',
+                    explanation: 'Oui.'
+                }
+            ]
+        },
+        {
+            id: 'b2-langue',
+            title: 'Langue et société',
+            content: `<p>Les langues évoluent avec les usages. Les emprunts ne signent pas forcément un déclin.</p><p>Proposer des équivalents clairs peut enrichir le français sans rejeter tout contact avec d'autres langues.</p><p>Les institutions publient des recommandations, rarement des interdictions absolues.</p>`,
+            questions: [
+                {
+                    id: 'b2-langue-q1',
+                    type: 'radio',
+                    question: 'Position nuancée ?',
+                    options: [
+                        { id: 'a', text: 'Tout refuser' },
+                        { id: 'b', text: 'Équivalents + ouverture' },
+                        { id: 'c', text: 'Remplacer le français' }
+                    ],
+                    correctAnswer: 'b',
+                    explanation: 'Le texte indique : Équivalents + ouverture.'
+                },
+                {
+                    id: 'b2-langue-q2',
+                    type: 'radio',
+                    question: 'Le texte est en français.',
+                    options: [
+                        { id: 'a', text: 'Vrai' },
+                        { id: 'b', text: 'Faux' },
+                        { id: 'c', text: 'On ne sait pas' }
+                    ],
+                    correctAnswer: 'a',
+                    explanation: 'Oui.'
+                }
+            ]
+        },
+        {
+            id: 'b2-justice',
+            title: 'Accès au droit',
+            content: `<p>Comprendre ses droits reste difficile pour une partie de la population.</p><p>Des maisons de la justice et du droit proposent des consultations gratuites. Le langage administratif trop complexe reste un obstacle.</p><p>La clarté des documents publics est donc un enjeu démocratique.</p>`,
+            questions: [
+                {
+                    id: 'b2-justice-q1',
+                    type: 'radio',
+                    question: 'Obstacle cité ?',
+                    options: [
+                        { id: 'a', text: 'Trop de simplicité' },
+                        { id: 'b', text: 'Langage administratif complexe' },
+                        { id: 'c', text: 'Absence totale de lois' }
+                    ],
+                    correctAnswer: 'b',
+                    explanation: 'Le texte indique : Langage administratif complexe.'
+                },
+                {
+                    id: 'b2-justice-q2',
+                    type: 'radio',
+                    question: 'Le texte est en français.',
+                    options: [
+                        { id: 'a', text: 'Vrai' },
+                        { id: 'b', text: 'Faux' },
+                        { id: 'c', text: 'On ne sait pas' }
+                    ],
+                    correctAnswer: 'a',
+                    explanation: 'Oui.'
+                }
+            ]
+        },
+        {
+            id: 'b2-sante',
+            title: 'Prévention',
+            content: `<p>Investir dans la prévention coûte moins cher à long terme que gérer uniquement les urgences.</p><p>Campagnes vaccinales, activité physique et réduction des inégalités d'accès aux soins font partie des leviers.</p><p>Les résultats se mesurent souvent sur plusieurs années.</p>`,
+            questions: [
+                {
+                    id: 'b2-sante-q1',
+                    type: 'radio',
+                    question: 'Logique économique ?',
+                    options: [
+                        { id: 'a', text: 'Prévention rentable à long terme' },
+                        { id: 'b', text: 'Urgence toujours moins chère' },
+                        { id: 'c', text: 'Prévention inutile' }
+                    ],
+                    correctAnswer: 'a',
+                    explanation: 'Le texte indique : Prévention rentable à long terme.'
+                },
+                {
+                    id: 'b2-sante-q2',
+                    type: 'radio',
+                    question: 'Le texte est en français.',
+                    options: [
+                        { id: 'a', text: 'Vrai' },
+                        { id: 'b', text: 'Faux' },
+                        { id: 'c', text: 'On ne sait pas' }
+                    ],
+                    correctAnswer: 'a',
+                    explanation: 'Oui.'
+                }
+            ]
+        },
+        {
+            id: 'b2-culture',
+            title: 'Culture et communs',
+            content: `<p>Considérer certaines œuvres numériques comme des communs élargit l'accès au savoir.</p><p>Cela exige aussi des règles de contribution et de financement durables.</p><p>Sans modèle économique clair, la qualité éditoriale peut s'éroder.</p>`,
+            questions: [
+                {
+                    id: 'b2-culture-q1',
+                    type: 'radio',
+                    question: 'Condition citée ?',
+                    options: [
+                        { id: 'a', text: 'Règles de contribution/financement' },
+                        { id: 'b', text: 'Aucun financement' },
+                        { id: 'c', text: 'Secret total' }
+                    ],
+                    correctAnswer: 'a',
+                    explanation: 'Le texte indique : Règles de contribution/financement.'
+                },
+                {
+                    id: 'b2-culture-q2',
+                    type: 'radio',
+                    question: 'Le texte est en français.',
+                    options: [
+                        { id: 'a', text: 'Vrai' },
+                        { id: 'b', text: 'Faux' },
+                        { id: 'c', text: 'On ne sait pas' }
+                    ],
+                    correctAnswer: 'a',
+                    explanation: 'Oui.'
+                }
+            ]
+        },
+        {
+            id: 'b2-mobilites',
+            title: 'Politiques de mobilité',
+            content: `<p>Réduire l'autosolisme demande une offre de transports crédible, pas seulement des interdictions.</p><p>Bus fréquents, pistes cyclables continues et tarification juste forment un ensemble.</p><p>L'acceptabilité dépend de la qualité perçue du service alternatif.</p>`,
+            questions: [
+                {
+                    id: 'b2-mobilites-q1',
+                    type: 'radio',
+                    question: 'Condition d\'acceptabilité ?',
+                    options: [
+                        { id: 'a', text: 'Qualité du service alternatif' },
+                        { id: 'b', text: 'Amendes seules' },
+                        { id: 'c', text: 'Suppression des trottoirs' }
+                    ],
+                    correctAnswer: 'a',
+                    explanation: 'Le texte indique : Qualité du service alternatif.'
+                },
+                {
+                    id: 'b2-mobilites-q2',
+                    type: 'radio',
+                    question: 'Le texte est en français.',
+                    options: [
+                        { id: 'a', text: 'Vrai' },
+                        { id: 'b', text: 'Faux' },
+                        { id: 'c', text: 'On ne sait pas' }
+                    ],
+                    correctAnswer: 'a',
+                    explanation: 'Oui.'
+                }
+            ]
+        },
+        {
+            id: 'b2-data',
+            title: 'Données personnelles',
+            content: `<p>Nos données permettent des services utiles, mais aussi un ciblage commercial parfois opaque.</p><p>Le consentement éclairé suppose de comprendre ce qui est collecté et pourquoi.</p><p>Des alternatives respectueuses de la vie privée existent, encore trop peu connues.</p>`,
+            questions: [
+                {
+                    id: 'b2-data-q1',
+                    type: 'radio',
+                    question: 'Consentement éclairé suppose ?',
+                    options: [
+                        { id: 'a', text: 'Comprendre collecte et finalité' },
+                        { id: 'b', text: 'Cliquer sans lire toujours' },
+                        { id: 'c', text: 'Donner toutes ses clés' }
+                    ],
+                    correctAnswer: 'a',
+                    explanation: 'Le texte indique : Comprendre collecte et finalité.'
+                },
+                {
+                    id: 'b2-data-q2',
+                    type: 'radio',
+                    question: 'Le texte est en français.',
+                    options: [
+                        { id: 'a', text: 'Vrai' },
+                        { id: 'b', text: 'Faux' },
+                        { id: 'c', text: 'On ne sait pas' }
+                    ],
+                    correctAnswer: 'a',
+                    explanation: 'Oui.'
+                }
+            ]
+        },
+        {
+            id: 'b2-democratie',
+            title: 'Participation citoyenne',
+            content: `<p>Les consultations en ligne élargissent la participation, mais risquent d'exclure ceux qui sont peu connectés.</p><p>Les dispositifs hybrides — numérique + réunions de quartier — sont souvent plus inclusifs.</p><p>La transparence sur l'usage des contributions maintient la confiance.</p>`,
+            questions: [
+                {
+                    id: 'b2-democratie-q1',
+                    type: 'radio',
+                    question: 'Approche plus inclusive ?',
+                    options: [
+                        { id: 'a', text: 'Uniquement en ligne' },
+                        { id: 'b', text: 'Hybride numérique + quartier' },
+                        { id: 'c', text: 'Fermer les débats' }
+                    ],
+                    correctAnswer: 'b',
+                    explanation: 'Le texte indique : Hybride numérique + quartier.'
+                },
+                {
+                    id: 'b2-democratie-q2',
+                    type: 'radio',
+                    question: 'Le texte est en français.',
+                    options: [
+                        { id: 'a', text: 'Vrai' },
+                        { id: 'b', text: 'Faux' },
+                        { id: 'c', text: 'On ne sait pas' }
+                    ],
+                    correctAnswer: 'a',
+                    explanation: 'Oui.'
+                }
+            ]
+        },
+        {
+            id: 'b2-economie',
+            title: 'Économie circulaire',
+            content: `<p>Réparer, réemployer et recycler prolongent la vie des objets.</p><p>Pour réussir, il faut des filières locales, des compétences techniques et une demande suffisante.</p><p>Le moindre coût du neuf jetable reste un frein puissant.</p>`,
+            questions: [
+                {
+                    id: 'b2-economie-q1',
+                    type: 'radio',
+                    question: 'Frein cité ?',
+                    options: [
+                        { id: 'a', text: 'Trop de réparateurs' },
+                        { id: 'b', text: 'Neuf jetable trop bon marché' },
+                        { id: 'c', text: 'Absence d\'objets' }
+                    ],
+                    correctAnswer: 'b',
+                    explanation: 'Le texte indique : Neuf jetable trop bon marché.'
+                },
+                {
+                    id: 'b2-economie-q2',
+                    type: 'radio',
+                    question: 'Le texte est en français.',
+                    options: [
+                        { id: 'a', text: 'Vrai' },
+                        { id: 'b', text: 'Faux' },
+                        { id: 'c', text: 'On ne sait pas' }
+                    ],
+                    correctAnswer: 'a',
+                    explanation: 'Oui.'
+                }
+            ]
+        },
+        {
+            id: 'b2-archives',
+            title: 'Mémoire numérique',
+            content: `<p>Les formats numériques vieillissent vite. Sans migration régulière, des archives deviennent illisibles.</p><p>Les institutions publiques jouent un rôle clé pour préserver la mémoire collective.</p><p>Le financement stable est aussi important que la technologie.</p>`,
+            questions: [
+                {
+                    id: 'b2-archives-q1',
+                    type: 'radio',
+                    question: 'Risque ?',
+                    options: [
+                        { id: 'a', text: 'Formats obsolètes / archives illisibles' },
+                        { id: 'b', text: 'Trop de papier seulement' },
+                        { id: 'c', text: 'Internet trop lent toujours' }
+                    ],
+                    correctAnswer: 'a',
+                    explanation: 'Le texte indique : Formats obsolètes / archives illisibles.'
+                },
+                {
+                    id: 'b2-archives-q2',
+                    type: 'radio',
+                    question: 'Le texte est en français.',
+                    options: [
+                        { id: 'a', text: 'Vrai' },
+                        { id: 'b', text: 'Faux' },
+                        { id: 'c', text: 'On ne sait pas' }
+                    ],
+                    correctAnswer: 'a',
+                    explanation: 'Oui.'
+                }
+            ]
+        },
+        {
+            id: 'b2-sport',
+            title: 'Sport et égalité',
+            content: `<p>La médiatisation du sport féminin progresse, mais reste inférieure à celle du sport masculin dans bien des disciplines.</p><p>Les sponsors suivent lentement l'intérêt d'un public plus jeune.</p><p>L'enjeu dépasse le spectacle : il s'agit aussi de représentation.</p>`,
+            questions: [
+                {
+                    id: 'b2-sport-q1',
+                    type: 'radio',
+                    question: 'Enjeu plus large ?',
+                    options: [
+                        { id: 'a', text: 'Représentation' },
+                        { id: 'b', text: 'Météo' },
+                        { id: 'c', text: 'Transports' }
+                    ],
+                    correctAnswer: 'a',
+                    explanation: 'Le texte indique : Représentation.'
+                },
+                {
+                    id: 'b2-sport-q2',
+                    type: 'radio',
+                    question: 'Le texte est en français.',
+                    options: [
+                        { id: 'a', text: 'Vrai' },
+                        { id: 'b', text: 'Faux' },
+                        { id: 'c', text: 'On ne sait pas' }
+                    ],
+                    correctAnswer: 'a',
+                    explanation: 'Oui.'
+                }
+            ]
+        },
+        {
+            id: 'b2-urbanisme',
+            title: 'Friches urbaines',
+            content: `<p>Transformer une friche industrielle en logements sociaux et en tiers-lieu culturel demande du temps et de la concertation.</p><p>Les riverains demandent souvent des espaces verts et de meilleurs transports.</p><p>Les projets réussis articulent habitat, services et vie de quartier.</p>`,
+            questions: [
+                {
+                    id: 'b2-urbanisme-q1',
+                    type: 'radio',
+                    question: 'Demandes riverains fréquentes ?',
+                    options: [
+                        { id: 'a', text: 'Espaces verts et transports' },
+                        { id: 'b', text: 'Plus d\'usines' },
+                        { id: 'c', text: 'Supprimer les logements' }
+                    ],
+                    correctAnswer: 'a',
+                    explanation: 'Le texte indique : Espaces verts et transports.'
+                },
+                {
+                    id: 'b2-urbanisme-q2',
+                    type: 'radio',
+                    question: 'Le texte est en français.',
+                    options: [
+                        { id: 'a', text: 'Vrai' },
+                        { id: 'b', text: 'Faux' },
+                        { id: 'c', text: 'On ne sait pas' }
+                    ],
+                    correctAnswer: 'a',
+                    explanation: 'Oui.'
+                }
+            ]
+        },
+        {
+            id: 'b2-ethique',
+            title: 'Design éthique',
+            content: `<p>Un produit numérique éthique anticipe les usages problématiques et limite les mécanismes addictifs.</p><p>La clarté des réglages de confidentialité fait partie de cette responsabilité.</p><p>Le design n'est jamais neutre.</p>`,
+            questions: [
+                {
+                    id: 'b2-ethique-q1',
+                    type: 'radio',
+                    question: 'Que limite-t-il ?',
+                    options: [
+                        { id: 'a', text: 'Mécanismes addictifs' },
+                        { id: 'b', text: 'L\'accessibilité' },
+                        { id: 'c', text: 'La clarté' }
+                    ],
+                    correctAnswer: 'a',
+                    explanation: 'Le texte indique : Mécanismes addictifs.'
+                },
+                {
+                    id: 'b2-ethique-q2',
+                    type: 'radio',
+                    question: 'Le texte est en français.',
+                    options: [
+                        { id: 'a', text: 'Vrai' },
+                        { id: 'b', text: 'Faux' },
+                        { id: 'c', text: 'On ne sait pas' }
+                    ],
+                    correctAnswer: 'a',
+                    explanation: 'Oui.'
+                }
+            ]
+        },
+        {
+            id: 'b2-francophonie',
+            title: 'Espace francophone',
+            content: `<p>La francophonie ne se limite pas à la culture : elle inclut éducation, recherche et échanges économiques.</p><p>Des partenariats plus équilibrés entre Nord et Sud sont régulièrement réclamés.</p><p>La diversité des français parlée dans le monde est une richesse, non un problème.</p>`,
+            questions: [
+                {
+                    id: 'b2-francophonie-q1',
+                    type: 'radio',
+                    question: 'Richesse citée ?',
+                    options: [
+                        { id: 'a', text: 'Diversité des français' },
+                        { id: 'b', text: 'Uniformité totale' },
+                        { id: 'c', text: 'Abandon du français' }
+                    ],
+                    correctAnswer: 'a',
+                    explanation: 'Le texte indique : Diversité des français.'
+                },
+                {
+                    id: 'b2-francophonie-q2',
+                    type: 'radio',
+                    question: 'Le texte est en français.',
+                    options: [
+                        { id: 'a', text: 'Vrai' },
+                        { id: 'b', text: 'Faux' },
+                        { id: 'c', text: 'On ne sait pas' }
+                    ],
+                    correctAnswer: 'a',
+                    explanation: 'Oui.'
+                }
+            ]
         }
     ]
-}; 
+};
